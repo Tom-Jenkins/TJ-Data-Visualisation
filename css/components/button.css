@@ -1,0 +1,21 @@
+.btn {
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.30rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, green, yellowgreen);
+    cursor: pointer;
+    border: none;
+    border-radius: 1px;
+
+    &:hover {
+        background-image: none;
+        background-color: yellowgreen;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}

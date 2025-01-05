@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* 
+    Browser default font size is usually 16px.
+    This sets the base font size to X% of the default.
+    This font size defines the value of 1rem, as rem units are relative to the root <html> element.
+    */
+    font-size : 62.5%;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: var(--font-colour-primary);
+}
+
+body {
+    box-sizing: border-box;
+}
