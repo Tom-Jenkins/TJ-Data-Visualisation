@@ -13,7 +13,7 @@
     ); */
     
     div {
-        background-color: yellow;
+        background-color: none;
     }
 
     div.home__title {
@@ -21,6 +21,7 @@
         width: 100%;
         text-transform: capitalize;
         font-size: 6rem;
+        letter-spacing: 0.25rem;
     }
 
     /* div.home__main {
