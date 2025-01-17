@@ -1,0 +1,13 @@
+.row-top {
+    padding-top: var(--navbar-height);
+}  
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 1rem;
+    gap: 5rem;
+    /* max-width: 500px; */
+}

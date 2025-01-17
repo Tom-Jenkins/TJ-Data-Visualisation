@@ -4,7 +4,9 @@
 
 @import url("components/button.css");
 
-@import url("layout/home.css");
+@import url("layout/containers.css");
 @import url("layout/navbar.css");
-@import url("layout/navigation.css");
-@import url("layout/placeholder.css");
+@import url("layout/mobileNavigation.css");
+
+@import url("pages/home.css");
+

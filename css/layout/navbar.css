@@ -2,7 +2,7 @@
     position: fixed;
     /* right: 1rem; */
     /* top: 1rem; */
-    padding: 0.50rem;
+    height: var(--navbar-height);
     text-decoration: none;
     user-select: none;
     display: none;
@@ -20,7 +20,8 @@
         letter-spacing: 0.20rem;
         cursor: pointer;
         margin-right: auto;
-        padding-left: 2.5rem;
+        padding-left: 2rem;
+        color: var(--colour-white);
 
         a.navbar__title--link {
             text-decoration: none;
@@ -29,7 +30,7 @@
         }
     }
 
-    div.navbar__container {
+    div.navbar__items {
         /* display: none; */
         font-size: 1.6rem;
         font-weight: 700;
@@ -37,7 +38,6 @@
         text-transform: uppercase;
         padding: 0.50rem 1.5rem;
         border-radius: 10px;
-        cursor: pointer;
 
         a.navbar__button {
             display: inline-block;
@@ -52,6 +52,7 @@
             background-repeat: no-repeat;
             background-position: bottom;
 
+            /* State on hover */
             &:hover {
                 background-image: linear-gradient(to top, var(--colour-white) 0%, var(--colour-white) 100%);
                 background-size: 100% 100%;
@@ -61,6 +62,7 @@
                 transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
             }
 
+            /* State during mousedown */
             &:active {
                 /* Need to cancel animation states on hover so that this works */
                 background-image: none;
@@ -70,6 +72,7 @@
                 color: var(--colour-black);
                 transform: scale(0.95); /* Adjust size of button */
             }
+
         }  
     }
 }

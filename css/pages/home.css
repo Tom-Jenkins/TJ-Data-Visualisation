@@ -1,0 +1,35 @@
+.home {
+    /* background-color: #f7f7f7; */
+    text-align: center;
+}
+
+.home__title {
+    /* background-color: yellow; */
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.50rem;
+    color: var(--colour-primary);
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+/* .home__points {
+    text-align: center;
+} */
+
+.home__image {
+    /* background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../images/laptop2.jpg); */
+    /* height: 50rem; */
+    height: 40rem;
+}
+
+.recentproject {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.recentproject__img {
+    height: 20rem;
+}

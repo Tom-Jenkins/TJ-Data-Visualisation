@@ -26,3 +26,14 @@ navCheckbox.addEventListener("change", () => {
         // document.querySelector(".navigation__nav").style.transition = "none";
     };
 });
+
+// ---------- //
+// UTILITY FUNCTIONS 
+// ---------- //
+
+// Import functions from module
+// import { preventHoverAnimation } from "./utility";
+
+// Prevent hover animation from happening after user clicks a navbar link
+
+

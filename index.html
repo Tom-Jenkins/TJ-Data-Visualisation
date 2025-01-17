@@ -7,13 +7,12 @@
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
-        
         <!-- JavaScript -->
         <script defer type="module" src="js/main.js"></script>
     </head>
 
     <body>
-
+        <!-- Mobile Screen Navigation -->
         <div class="navigation">
 
             <input title="checkbox" type="checkbox" class="navigation__checkbox" id="nav-toggle">
@@ -35,79 +34,98 @@
             </nav>
         </div>
 
-        <header class="navbar">
+        <!-- Laptop/Desktop Screen Navbar -->
+        <nav class="navbar">
 
             <div class="navbar__title">
                 <a href="index.html" class="navbar__title--link">Tom Jenkins</a>
             </div>
 
-            <div class="navbar__container">
+            <div class="navbar__items">
                 <a href="index.html" class="navbar__button">Home</a>
                 <a href="portfolio.html" class="navbar__button">Portfolio</a>
                 <a href="index.html" class="navbar__button">Services</a>
                 <a href="index.html" class="navbar__button">About</a>
                 <a href="index.html" class="navbar__button">Contact</a>
             </div>
-            
-        </header>
+        </nav>
 
-        <main>
+        <!-- Content -->
+        <section class="row-top home">
 
-            <section class="home">
-                <div class="home__title secondary">
-                    scientific data visualisation
-                </div>
+            <div class="row">
+                <h1 class="home__title">scientific data analysis</h1>
+            </div>
 
-                <div class="home__main">
-                    <p class="secondary">
-                        <em>web applications</em>
-                    </p>
-                    <p class="secondary">
-                        <em>interactive maps</em>
-                    </p>
-                    <p class="tertiary">
-                        <em>data dashboards</em>
+            <div class="row">
+                <div class="home__points">
+                    <p>
+                        <em>Web applications</em>
                     </p>
                     <p>
-                        <button type="button" class="btn">See Portfolio</button>
+                        <em>Interactive maps</em>
                     </p>
+                    <p>
+                        <em>Dashboards</em>
+                    </p>
+                    <div>
+                        <button type="button" class="btn">See Portfolio</button>
+                    </div>
                 </div>
+                <img src="images/laptop2.jpg" alt="image of a laptop and mouse" class="home__image">
+            </div>
+        </section>
 
-                <div class="home__image"></div>
-            </section>
+        <section class="recentproject">
 
-            <section class="placeholder">
-                <h2 class="secondary">Recent Project</h2>
-                <p class="secondary">
-                    Screenshot of UEA project apps
-                </p>
-            </section>
+            <div class="row">
+                <h1>Recent Project</h1>
+            </div>
 
-            <section class="placeholder">
-                <h2 class="secondary">Services</h2>
-                <p><button type="button" class="btn">See Services</button></p>
-            </section>
-
-            <section class="placeholder">
-                <h2 class="secondary">Testimonials</h2>
+            <div>
                 <p>
-                    Testimonial 1
+                    <span style="font-weight: bold;">Interactive maps and time series.</span> Built interactive web applications that allow users to explore geospatial and time series climate data. Agile development to ensure end products are fit for purpose. Preprocessing of data in R / Python and preparation of GeoJSON and JSON files.
                 </p>
-                <p>
-                    Testimonial 2
-                </p>
-            </section>
+            </div>
 
-            <section class="placeholder">
-                <h2 class="secondary">Contact</h2>
-                <p>
-                    Form details
-                </p>
-            </section>
+            <div class="row">
+                <div>
+                    <p>Map</p>
+                    <img src="images/UEA_contribution_map.PNG" alt="image of a xxx" class="recentproject__img">
+                </div>
+                <div>
+                    <p>Time Series</p>
+                    <img src="images/UEA_wildfire_timeseries.PNG" alt="image of a xxx" class="recentproject__img">
+                </div>
+                
+            </div>
+            
 
-        </main>
+        </section>
 
-        <footer class="tertiary">
+        <section>
+            <h2>Services</h2>
+            <p><button type="button" class="btn">See Services</button></p>
+        </section>
+
+        <section class="placeholder">
+            <h2>Testimonials</h2>
+            <p>
+                Testimonial 1
+            </p>
+            <p>
+                Testimonial 2
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>
+                Form details
+            </p>
+        </section>
+
+        <footer>
             This is a footer
         </footer>
          

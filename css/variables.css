@@ -23,8 +23,10 @@
     --scale-factor: 1;
 
     --text-shadow-size-pos: 1px;
-    --text-shadow-size-neg: -1px;  
-
+    --text-shadow-size-neg: -1px;
+    
+    --navbar-height: 50px;
+    
     /* Media breakpoints */
     /* --breakpoint-sm: 576px;
     --breakpoint-md: 768px;

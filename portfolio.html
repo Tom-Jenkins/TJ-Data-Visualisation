@@ -7,13 +7,12 @@
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
-        
         <!-- JavaScript -->
         <script defer type="module" src="js/main.js"></script>
     </head>
 
     <body>
-
+        <!-- Mobile Screen Navigation -->
         <div class="navigation">
 
             <input title="checkbox" type="checkbox" class="navigation__checkbox" id="nav-toggle">
@@ -28,68 +27,107 @@
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
                     <li class="navigation__item"><a href="portfolio.html" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
 
-        <header class="navbar">
+        <!-- Laptop/Desktop Screen Navbar -->
+        <nav class="navbar">
 
             <div class="navbar__title">
                 <a href="index.html" class="navbar__title--link">Tom Jenkins</a>
             </div>
 
-            <div class="navbar__container">
-                <a href="index.html" class="navbar__button navbar__button--1">Home</a>
-                <a href="portfolio.html" class="navbar__button navbar__button--2">Portfolio</a>
-                <a href="index.html" class="navbar__button navbar__button--3">About</a>
-                <a href="index.html" class="navbar__button navbar__button--4">Contact</a>
+            <div class="navbar__items">
+                <a href="index.html" class="navbar__button">Home</a>
+                <a href="portfolio.html" class="navbar__button">Portfolio</a>
+                <a href="index.html" class="navbar__button">Services</a>
+                <a href="index.html" class="navbar__button">About</a>
+                <a href="index.html" class="navbar__button">Contact</a>
             </div>
-            
-        </header>
+        </nav>
 
-        <main>
-            <section class="home">
+        <!-- Content -->
+        <section class="row-top home">
 
-                <div class="home__title secondary">
-                    gregrgrghrrrrrrrrrrrrr
-                </div>
+            <div class="row">
+                <h1 class="home__title">portfolio</h1>
+            </div>
 
-                <div>
-                    <p class="secondary">
-                        <em>bespoke web applications</em>
-                    </p>
-                    <p class="secondary">
-                        <em>interactive data visualisations</em>
-                    </p>
-                    <p class="tertiary">
-                        <em>static figures and infographics</em>
+            <div class="row">
+                <div class="home__points">
+                    <p>
+                        <em>Web applications</em>
                     </p>
                     <p>
-                        <button type="button" class="btn">My Projects</button>
+                        <em>Interactive maps</em>
                     </p>
+                    <p>
+                        <em>Dashboards</em>
+                    </p>
+                    <div>
+                        <button type="button" class="btn">See Portfolio</button>
+                    </div>
                 </div>
+                <img src="images/laptop2.jpg" alt="image of a laptop and mouse" class="home__image">
+            </div>
+        </section>
 
-                <div class="home__image">
-                   
+        <section class="recentproject">
+
+            <div class="row">
+                <h1>Recent Project</h1>
+            </div>
+
+            <div>
+                <p>
+                    <span style="font-weight: bold;">Interactive maps and time series.</span> Built interactive web applications that allow users to explore geospatial and time series climate data. Agile development to ensure end products are fit for purpose. Preprocessing of data in R / Python and preparation of GeoJSON and JSON files.
+                </p>
+            </div>
+
+            <div class="row">
+                <div>
+                    <p>Map</p>
+                    <img src="images/UEA_contribution_map.PNG" alt="image of a xxx" class="recentproject__img">
+                </div>
+                <div>
+                    <p>Time Series</p>
+                    <img src="images/UEA_wildfire_timeseries.PNG" alt="image of a xxx" class="recentproject__img">
                 </div>
                 
-            </section>
+            </div>
+            
 
-            <section class="placeholder">
-                <p class="secondary">
-                    Portfolio 1
-                </p>
-                <p class="secondary">
-                    Portfolio 2
-                </p>
-                <p class="tertiary">
-                    Portfolio 3
-                </p>
-            </section>
+        </section>
 
-        </main>
+        <section>
+            <h2>Services</h2>
+            <p><button type="button" class="btn">See Services</button></p>
+        </section>
+
+        <section class="placeholder">
+            <h2>Testimonials</h2>
+            <p>
+                Testimonial 1
+            </p>
+            <p>
+                Testimonial 2
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>
+                Form details
+            </p>
+        </section>
+
+        <footer>
+            This is a footer
+        </footer>
          
     </body>
 </html>

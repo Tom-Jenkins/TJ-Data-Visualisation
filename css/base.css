@@ -9,15 +9,17 @@
 html {
     /* 
     Browser default font size is usually 16px.
-    This sets the base font size to X% of the default.
+    This sets the base font size to a % of the default.
     This font size defines the value of 1rem, as rem units are relative to the root <html> element.
+    1rem = 10px, 10px/16px = 62.5%
     */
     font-size : 62.5%;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    color: var(--font-colour-primary);
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: var(--colour-white);
 }
