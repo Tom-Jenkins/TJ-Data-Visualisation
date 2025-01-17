@@ -1,28 +1,19 @@
 .home {
     /* background-color: #f7f7f7; */
     text-align: center;
+    padding: 1rem;
 }
 
 .home__title {
-    /* background-color: yellow; */
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 0.50rem;
-    color: var(--colour-primary);
-    font-size: 7rem;
-    font-weight: 700;
+    text-align: left;
 }
-
-/* .home__points {
-    text-align: center;
-} */
 
 .home__image {
     /* background-size: contain;
     background-repeat: no-repeat;
     background-image: url(../../images/laptop2.jpg); */
     /* height: 50rem; */
-    height: 35rem;
+    height: 30rem;
 }
 
 .recentproject {
@@ -32,4 +23,9 @@
 
 .recentproject__img {
     height: 20rem;
+}
+
+/* .services {} */
+.services__list {
+    list-style: inside;
 }
