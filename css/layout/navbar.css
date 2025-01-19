@@ -31,44 +31,43 @@
     letter-spacing: 0.30rem;
     text-transform: uppercase;
     padding: 0.40rem 1rem;
-    border-radius: 10px;
+    border-radius: 10px;  
+}
 
-    a.navbar__button {
-        display: inline-block;
-        background-color: var(--colour-black);
-        border-radius: inherit;
-        padding: inherit;
-        color: var(--colour-white);
-        text-decoration: none;
+.navbar__button {
+    display: inline-block;
+    background-color: var(--colour-black);
+    border-radius: inherit;
+    padding: inherit;
+    color: var(--colour-white);
+    text-decoration: none;
 
-        /* Initial state without animations */
-        background-size: 100% 0%;
-        background-repeat: no-repeat;
-        background-position: bottom;
+    /* Initial state without animations */
+    background-size: 100% 0%;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
-        /* State on hover */
-        &:hover {
-            background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
-            background-size: 100% 100%;
-            /* background-color: var(--colour-white); */
-            color: var(--colour-black);  
+    /* State on hover */
+    &:hover {
+        background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
+        background-size: 100% 100%;
+        /* background-color: var(--colour-white); */
+        color: var(--colour-black);  
 
-            /* Add animation only for hover */
-            transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
+        /* Add animation only for hover */
+        transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
 
-        /* State during mousedown */
-        &:active {
-            /* Need to cancel animation states on hover so that this works */
-            background-image: none;
-            transition: none;
+    /* State during mousedown */
+    &:active {
+        /* Need to cancel animation states on hover so that this works */
+        background-image: none;
+        transition: none;
 
-            background-color: var(--colour-white);
-            color: var(--colour-black);
-            transform: scale(0.95); /* Adjust size of button */
-        }
-
-    }  
+        background-color: var(--colour-white);
+        color: var(--colour-black);
+        transform: scale(0.95); /* Adjust size of button */
+    }
 }
 
 
