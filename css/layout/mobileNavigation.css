@@ -28,7 +28,7 @@
         position: fixed;
         top: 2.5rem;
         right: 2.5rem;
-        background-image: radial-gradient(var(--colour-primary-2), var(--colour-primary));
+        background-image: radial-gradient(var(--colour-secondary), var(--colour-primary));
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
     }
@@ -49,7 +49,7 @@
             display: inline-block;
             width: 3rem;
             height: 2px;
-            background-color: var(--colour-grey-dark);
+            background-color: var(--colour-black);
         }
 
         &::before,
