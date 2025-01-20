@@ -32,28 +32,32 @@
 }
 
 .nav__mobile--btn {
-    cursor: pointer;
-    background-color: white;
-    height: 7rem;
-    width: 7rem;
-    border-radius: 50%;
+    /* display: none; */
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 0.8rem;
+    right: 1rem;
+    height: 3.5rem;
+    width: 5.5rem;
     z-index: 2000;
-    box-shadow: 0 0 2rem var(--colour-black);
-    text-align: center;
+    border-radius: 3px;
+    
+    background-color: white;
+    cursor: pointer;
+    /* box-shadow: 0 0 2rem var(--colour-black); */
+    /* text-align: center; */
 }
 
 .nav__mobile--background {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
+    /* display: none; */
     position: fixed;
-    top: 2.5rem;
-    right: 2.5rem;
-    background-image: radial-gradient(var(--colour-secondary), var(--colour-primary));
+    top: 1rem;
+    right: 1.2rem;
+    height: 3rem;
+    width: 5rem;
     z-index: 1000;
+    border-radius: 3px;
+    
+    background-image: radial-gradient(var(--colour-secondary), var(--colour-primary));
     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
@@ -65,15 +69,16 @@
 /* Style hamburger icon */
 .nav__mobile--icon {
     position: relative;
-    margin-top: 3.5rem;
+    margin-top: 1.7rem;
+    margin-left: 1.28rem;
 
     &,
     &::before,
     &::after {
         display: inline-block;
-        width: 3rem;
-        height: 2px;
-        background-color: var(--colour-black);
+        width: 3rem; /* hamburger width */
+        height: 0.2rem; /* hamburger line thickness */
+        background-color: var(--colour-primary);
     }
 
     &::before,
@@ -194,7 +199,7 @@ Then select the button child element (icon)
 }
 
 /* Laptop/Desktop Screen Styles */
-@media (min-width: 920px) {
+@media (min-width: 768px) {
     
     .nav__mobile {
         display: none;
