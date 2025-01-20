@@ -3,51 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Scientific Data Visualisation</title>
+        <title>TJ Data Visualisation</title>
         <!-- CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <!-- JavaScript -->
         <script defer type="module" src="js/main.js"></script>
     </head>
 
     <body>
-        <!-- Mobile Screen Navigation -->
-        <div class="navigation">
 
-            <input title="checkbox" type="checkbox" class="navigation__checkbox" id="nav-toggle">
-
-            <label for="nav-toggle" class="navigation__button">
-                <span class="navigation__icon">&nbsp;</span>
-            </label>
-
-            <div class="navigation__background">&nbsp;</div>
-
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="portfolio.html" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- Laptop/Desktop Screen Navbar -->
         <nav class="navbar">
 
             <a href="index.html" class="navbar__logo--link">
                 <img src="images/logo.svg" alt="website logo" class="navbar__logo">
             </a>
-  
-            <div class="navbar__items">
-                <a href="index.html" class="navbar__button">Home</a>
-                <a href="portfolio.html" class="navbar__button">Portfolio</a>
-                <a href="index.html" class="navbar__button">Services</a>
-                <a href="index.html" class="navbar__button">About</a>
-                <a href="index.html" class="navbar__button">Contact</a>
+
+            <!-- Mobile Screen Navigation -->
+            <div class="nav__mobile">
+
+                <input title="checkbox" type="checkbox" class="nav__mobile--checkbox" id="nav-toggle">
+
+                <label for="nav-toggle" class="nav__mobile--btn">
+                    <span class="nav__mobile--icon">&nbsp;</span>
+                </label>
+
+                <div class="nav__mobile--background">&nbsp;</div>
+
+                <nav class="nav__mobile--menu">
+                    <ul class="nav__mobile--list">
+                        <li class="nav__mobile--item"><a href="index.html" class="nav__mobile--link">Home</a></li>
+                        <li class="nav__mobile--item"><a href="portfolio.html" class="nav__mobile--link">Portfolio</a></li>
+                        <li class="nav__mobile--item"><a href="#" class="nav__mobile--link">Services</a></li>
+                        <li class="nav__mobile--item"><a href="#" class="nav__mobile--link">About</a></li>
+                        <li class="nav__mobile--item"><a href="#" class="nav__mobile--link">Contact</a></li>
+                    </ul>
+                </nav>
+
             </div>
+            
+            <!-- Laptop/Desktop Screen Navigation -->
+            <div class="nav__laptop">
+                <a href="index.html" class="nav__laptop--btn">Home</a>
+                <a href="portfolio.html" class="nav__laptop--btn">Portfolio</a>
+                <a href="index.html" class="nav__laptop--btn">Services</a>
+                <a href="index.html" class="nav__laptop--btn">About</a>
+                <a href="index.html" class="nav__laptop--btn">Contact</a>
+            </div>
+            
         </nav>
 
         <!-- Content -->

@@ -4,12 +4,12 @@
     padding: 1rem;
 }
 
-.landing__title {
+.hero__title {
     text-align: left;
     color: var(--colour-grey);
 }
 
-.landing__image {
+.hero__image {
     /* background-size: contain;
     background-repeat: no-repeat;
     background-image: url(../../images/laptop2.jpg); */

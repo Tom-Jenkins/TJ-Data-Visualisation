@@ -1,0 +1,248 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: var(--navbar-height);
+    text-decoration: none;
+    user-select: none;
+    background-color: var(--colour-primary);
+    box-shadow: 0 0.1px 10px 0 var(--colour-tertiary);
+
+    align-items: center; /* vertical alignment */
+    justify-content: space-between; /* flush horizontal alignment between logo and items*/
+}
+
+.navbar__logo--link {
+    height: 100%;
+}
+
+.navbar__logo {
+    height: inherit;
+    padding: 0.40rem 1rem;
+}
+
+/* Mobile Screen Styles */
+.nav__mobile {
+    color: var(--color-black);
+    user-select: none;
+}
+
+.nav__mobile--checkbox {
+    display: none;
+}
+
+.nav__mobile--btn {
+    cursor: pointer;
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 2000;
+    box-shadow: 0 0 2rem var(--colour-black);
+    text-align: center;
+}
+
+.nav__mobile--background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    background-image: radial-gradient(var(--colour-secondary), var(--colour-primary));
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+/* When checked apply styles to input sibling – i.e. the background */
+.nav__mobile--checkbox:checked ~ .nav__mobile--background {
+    transform: scale(var(--scale-factor));
+}
+
+/* Style hamburger icon */
+.nav__mobile--icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+        display: inline-block;
+        width: 3rem;
+        height: 2px;
+        background-color: var(--colour-black);
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+
+    /* Space between hamburgers */
+    &::before { top: -.8rem; }
+    &::after { top: .8rem; }
+}
+
+/* 
+The "+" is used because checkbox is adjacent sibling to button
+Then select the button child element (icon)
+*/
+.nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon {
+    background-color: transparent;
+}
+
+/* Rotate outer hamburger lines */
+.nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+.nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+/* When checked apply styles to input sibling – mobile nanigation menu */
+.nav__mobile--checkbox:checked ~ .nav__mobile--menu {
+    opacity: 1;
+    width: 100%;
+    pointer-events: auto;
+}
+
+/* Mobile navigation menu when hamburger icon clicked */
+.nav__mobile--menu {
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1500;
+    border-radius: 10px;
+    pointer-events: none;
+
+    /* Hide navigation list by default */
+    opacity: 0;
+    transition: opacity .7s ease-in .2s;
+}
+
+/* When unchecked apply these styles */
+.nav__mobile--checkbox:not(:checked) ~ .nav__mobile--menu {
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+.nav__mobile--list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.nav__mobile--item {
+    display: inline-block;
+    margin: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+                
+.nav__mobile--link {
+    &:link,
+    &:visited {
+        color: var(--colour-white);
+        text-decoration: none;
+        padding: 1rem 4rem;
+        border-radius: 10px;
+        
+        /* Initial state without animations */
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        background-position: left;
+    }         
+
+    &:hover {
+        background-image: linear-gradient(to right, var(--colour-white) 0%, var(--colour-white) 100%);
+        background-size: 100% 100%;
+        color: var(--colour-black);
+
+        /* Add animation only for hover */
+        transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    &:active {
+        /* Need to cancel animation states on hover so that this works */
+        background-image: none;
+        transition: none;
+        
+        background-color: var(--colour-white);
+        color: var(--colour-black);
+        font-weight: 900;
+        transform: scale(0.95); /* Adjust size of button */
+    }
+}
+
+.nav__laptop {
+    display: none;
+}
+
+/* Laptop/Desktop Screen Styles */
+@media (min-width: 920px) {
+    
+    .nav__mobile {
+        display: none;
+    }
+
+    .nav__laptop {
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.30rem;
+        text-transform: uppercase;
+        padding: 0.40rem 1rem;
+        border-radius: 10px;  
+    }
+    
+    .nav__laptop--btn {
+        display: inline-block;
+        background-color: var(--colour-black);
+        border-radius: inherit;
+        padding: inherit;
+        color: var(--colour-white);
+        text-decoration: none;
+    
+        /* Initial state without animations */
+        background-size: 100% 0%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    
+        /* State on hover */
+        &:hover {
+            background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
+            background-size: 100% 100%;
+            /* background-color: var(--colour-white); */
+            color: var(--colour-black);  
+    
+            /* Add animation only for hover */
+            transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+    
+        /* State during mousedown */
+        &:active {
+            /* Need to cancel animation states on hover so that this works */
+            background-image: none;
+            transition: none;
+    
+            background-color: var(--colour-white);
+            color: var(--colour-black);
+            transform: scale(0.95); /* Adjust size of button */
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 // Function to calculate the scale factor needed to fill the viewport when hamburger button clicked
 const updateScaleFactor = function () {
-    const background = document.querySelector(".navigation__background");
+    const background = document.querySelector(".nav__mobile--background");
     const rect = background.getBoundingClientRect();
     const diameter = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2);
     const scaleFactor = diameter / rect.width;
@@ -16,7 +16,7 @@ window.addEventListener("load", updateScaleFactor);
 window.addEventListener("resize", updateScaleFactor);
 
 // Event listener to remove overflow scroll bar from body when navigation icon clicked
-const navCheckbox = document.querySelector(".navigation__checkbox");
+const navCheckbox = document.querySelector(".nav__mobile--checkbox");
 navCheckbox.addEventListener("change", () => {
     if (navCheckbox.checked) {
         document.body.style.overflow = "hidden";
