@@ -6,6 +6,7 @@ const updateScaleFactor = function () {
     const rect = background.getBoundingClientRect();
     const diameter = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2);
     const scaleFactor = diameter / rect.width;
+    // const scaleFactor = 45
 
     // Update CSS variable
     document.documentElement.style.setProperty("--scale-factor", scaleFactor * 2);
