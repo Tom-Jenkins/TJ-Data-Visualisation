@@ -1,8 +1,8 @@
 .btn {
-    padding: 1rem;
+    padding: .8rem;
     text-transform: uppercase;
     letter-spacing: 0.30rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     background-color: var(--colour-tertiary);
     color: var(--colour-primary);

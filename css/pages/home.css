@@ -1,7 +1,9 @@
-.home {
-    background-color: var(--colour-primary);
-    text-align: center;
-    padding: 1rem;
+.hero {
+    background-image: linear-gradient(var(--colour-primary), var(--colour-secondary));
+}
+
+.hero__logo {
+    width: 10rem;
 }
 
 .hero__title {
@@ -33,4 +35,12 @@
 
 .services__list {
     list-style: inside;
+}
+
+.testimonials {
+    background-color: var(--colour-secondary);
+}
+
+.contact {
+    background-color: var(--colour-grey);
 }

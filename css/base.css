@@ -23,3 +23,8 @@ body {
     line-height: 1.6;
     background-color: var(--colour-white);
 }
+
+section {
+    text-align: center;
+    padding: 1rem;
+}

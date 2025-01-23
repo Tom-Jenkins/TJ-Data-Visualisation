@@ -207,11 +207,11 @@ Then select the button child element (icon)
 
     .nav__laptop {
         display: inline-block;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 700;
         letter-spacing: 0.30rem;
         text-transform: uppercase;
-        padding: 0.40rem 1rem;
+        padding: 0.35rem 1rem;
         border-radius: 10px;  
     }
     
@@ -222,21 +222,21 @@ Then select the button child element (icon)
         padding: inherit;
         color: var(--colour-white);
         text-decoration: none;
-    
+
         /* Initial state without animations */
-        background-size: 100% 0%;
+        /* background-size: 100% 0%;
         background-repeat: no-repeat;
-        background-position: bottom;
+        background-position: bottom; */
     
         /* State on hover */
         &:hover {
-            background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
-            background-size: 100% 100%;
-            /* background-color: var(--colour-white); */
-            color: var(--colour-black);  
+            /* background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
+            background-size: 100% 100%; */
+            background-color: var(--colour-white);
+            color: var(--colour-black);
     
             /* Add animation only for hover */
-            transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+            /* transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out; */
         }
     
         /* State during mousedown */
