@@ -18,7 +18,7 @@
 
 .navbar__logo {
     height: inherit;
-    padding: 0.40rem 1rem;
+    padding: 1rem;
 }
 
 /* Mobile Screen Styles */
@@ -207,21 +207,28 @@ Then select the button child element (icon)
 
     .nav__laptop {
         display: inline-block;
+        align-content: center;
+        height: inherit;
+        padding-right: 1rem;
         font-size: 1.4rem;
         font-weight: 700;
         letter-spacing: 0.30rem;
         text-transform: uppercase;
-        padding: 0.35rem 1rem;
-        border-radius: 10px;  
+        
+        /* border-radius: 10px;   */
     }
     
     .nav__laptop--btn {
         display: inline-block;
-        background-color: var(--colour-black);
-        border-radius: inherit;
-        padding: inherit;
+        align-content: center;
+        height: 70%;
+        padding: 0 .5rem;
+        margin: auto .5rem;
         color: var(--colour-white);
         text-decoration: none;
+        
+        /* background-color: var(--colour-black); */
+        /* border-radius: inherit; */
 
         /* Initial state without animations */
         /* background-size: 100% 0%;
@@ -232,22 +239,25 @@ Then select the button child element (icon)
         &:hover {
             /* background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
             background-size: 100% 100%; */
-            background-color: var(--colour-white);
-            color: var(--colour-black);
-    
             /* Add animation only for hover */
             /* transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out; */
+
+            /* background-color: var(--colour-white);
+            color: var(--colour-black); */
+            height: 65%;
+            border-bottom: .2rem solid var(--colour-white);
+            transition: border-bottom .1s ease-in;
         }
     
         /* State during mousedown */
         &:active {
             /* Need to cancel animation states on hover so that this works */
-            background-image: none;
-            transition: none;
-    
+            /* background-image: none;
+            transition: none; */
+            /* transform: scale(0.95); */
+
             background-color: var(--colour-white);
             color: var(--colour-black);
-            transform: scale(0.95); /* Adjust size of button */
         }
     }
 }
