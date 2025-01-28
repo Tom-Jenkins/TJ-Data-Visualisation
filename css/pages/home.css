@@ -8,19 +8,33 @@
 
 .hero__title {
     text-align: left;
-    color: var(--colour-grey);
+    color: var(--colour-white);
 }
 
 .hero__image {
-    /* background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(../../images/laptop2.jpg); */
-    /* height: 50rem; */
-    height: 30rem;
+    width: 30rem;
+}
+
+.hero__icon {
+    width: 10rem;
+    fill: white;
+    opacity: 0; /* Initially hidden */
+    animation: reveal-left 1s ease-in-out forwards; /* Animation settings */
+}
+
+@keyframes reveal-left {
+0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen to the left */
+}
+100% {
+    opacity: 1;
+    transform: translateX(0); /* End in the visible position */
+}
 }
 
 .recentproject {
-    background-color: var(--colour-grey);
+    background-color: var(--colour-white);
     color: var(--colour-primary);
     text-align: center;
 }
@@ -30,7 +44,7 @@
 }
 
 .services {
-    background-color: var(--colour-white);
+    background-color: var(--colour-grey);
 }
 
 .services__list {
@@ -38,9 +52,14 @@
 }
 
 .testimonials {
-    background-color: var(--colour-secondary);
+    background-color: var(--colour-white);
 }
 
 .contact {
     background-color: var(--colour-grey);
+}
+
+#map {
+    width: 100%;
+    height: 20rem;
 }

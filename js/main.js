@@ -29,8 +29,16 @@ function updateScaleFactor() {
     document.documentElement.style.setProperty("--scale-factor", scaleFactor);
 }
 
-// Update the scale factor on load and resize
-window.addEventListener("load", updateScaleFactor);
+// On window load
+window.addEventListener("load", () => {
+    // Update the scale factor
+    updateScaleFactor();
+
+    // Run hero image animation
+    // document.querySelector(".hero__image").classList.add("hero__image--open");
+});
+
+// On window resize
 window.addEventListener("resize", updateScaleFactor);
 
 // Event listener to remove overflow scroll bar from body when navigation icon clicked
@@ -45,6 +53,7 @@ navCheckbox.addEventListener("change", () => {
     };
 });
 
+
 // ---------- //
 // UTILITY FUNCTIONS 
 // ---------- //
@@ -52,6 +61,10 @@ navCheckbox.addEventListener("change", () => {
 // Import functions from module
 // import { preventHoverAnimation } from "./utility";
 
-// Prevent hover animation from happening after user clicks a navbar link
 
-
+var map = L.map('map').setView([51.505, -0.09], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([51.5, -0.09]).addTo(map);
