@@ -1,14 +1,35 @@
 .hero {
-    background-image: linear-gradient(var(--colour-primary), var(--colour-secondary));
+    /* background-image: linear-gradient(var(--colour-primary), var(--colour-secondary)); */
+    background-image: linear-gradient(to top, var(--colour-primary), var(--colour-primary-dark)), url(../../images/cover4.JPG);
+    background-size: cover;
+    background-blend-mode: screen;
+    align-content: center;
+}
+
+.hero__main {
+    align-content: center;
+    text-align: center;
+    color: var(--colour-white);
+
+    & > h1 > img {
+        width: 6.8rem;
+        margin-right: 1rem;
+    }
+
+    & > p {
+        text-align: center;
+        text-transform: lowercase;
+        font-style: italic;
+    }
+}
+
+.hero__btn {
+    text-align: center;
+    padding: 2rem 0;
 }
 
 .hero__logo {
     width: 10rem;
-}
-
-.hero__title {
-    text-align: left;
-    color: var(--colour-white);
 }
 
 .hero__image {
@@ -33,13 +54,13 @@
 }
 }
 
-.recentproject {
+.project {
     background-color: var(--colour-white);
     color: var(--colour-primary);
     text-align: center;
 }
 
-.recentproject__img {
+.project__img {
     height: 20rem;
 }
 

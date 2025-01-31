@@ -19,7 +19,7 @@
 
 .navbar__logo {
     height: inherit;
-    padding: 1rem;
+    padding: 0.75rem;
 }
 
 /* Mobile Screen Styles */
@@ -200,7 +200,7 @@ Then select the button child element (icon)
 }
 
 /* Laptop/Desktop Screen Styles */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     
     .nav__mobile {
         display: none;

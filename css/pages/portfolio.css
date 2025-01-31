@@ -1,5 +1,22 @@
 .portfolio {
-    /* background-color: #f7f7f7; */
-    text-align: center;
+    background-color: var(--colour-white);
+    /* background-image: linear-gradient(to right bottom, var(--colour-primary), var(--colour-secondary)), url(../../images/cover.JPG);
+    background-size: cover;
+    background-blend-mode: screen; */
     padding: 1rem;
+}
+
+.portfolio__title {
+    margin-bottom: 2rem;
+
+    & > p {
+        padding: 0;
+        text-align: center;
+        text-transform: lowercase;
+        font-style: italic;
+    }
+}
+
+.portfolio__btn {
+    margin: .5rem .5rem;
 }
