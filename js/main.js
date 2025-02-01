@@ -1,5 +1,9 @@
 "use strict";
 
+// ---------- //
+// UTILITY FUNCTIONS 
+// ---------- //
+
 // Function to calculate the scale factor needed to fill the viewport when hamburger button clicked
 function updateScaleFactor() {
     // Get element from DOM
@@ -52,19 +56,3 @@ navCheckbox.addEventListener("change", () => {
         // document.querySelector(".navigation__nav").style.transition = "none";
     };
 });
-
-
-// ---------- //
-// UTILITY FUNCTIONS 
-// ---------- //
-
-// Import functions from module
-// import { preventHoverAnimation } from "./utility";
-
-
-var map = L.map('map').setView([51.505, -0.09], 13);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-var marker = L.marker([51.5, -0.09]).addTo(map);
