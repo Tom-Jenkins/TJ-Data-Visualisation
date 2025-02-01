@@ -19,7 +19,7 @@
 
 .navbar__logo {
     height: inherit;
-    padding: 0.75rem;
+    padding: 7.5px;
 }
 
 /* Mobile Screen Styles */
@@ -35,10 +35,10 @@
 .nav__mobile--btn {
     /* display: none; */
     position: fixed;
-    top: 0.8rem;
-    right: 1rem;
-    height: 3.5rem;
-    width: 5.5rem;
+    top: 10px;
+    right: 10px;
+    height: 35px;
+    width: 55px;
     z-index: 2000;
     border-radius: 3px;
     
@@ -51,10 +51,10 @@
 .nav__mobile--background {
     /* display: none; */
     position: fixed;
-    top: 1rem;
-    right: 1.2rem;
-    height: 3rem;
-    width: 5rem;
+    top: 13px;
+    right: 12px;
+    height: 30px;
+    width: 50px;
     z-index: 1000;
     border-radius: 3px;
     
@@ -70,15 +70,15 @@
 /* Style hamburger icon */
 .nav__mobile--icon {
     position: relative;
-    margin-top: 1.7rem;
-    margin-left: 1.28rem;
+    margin-top: 17px;
+    margin-left: 12.8px;
 
     &,
     &::before,
     &::after {
         display: inline-block;
-        width: 3rem; /* hamburger width */
-        height: 0.2rem; /* hamburger line thickness */
+        width: 30px; /* hamburger width */
+        height: 1.5px; /* hamburger line thickness */
         background-color: var(--colour-primary);
     }
 
@@ -91,8 +91,8 @@
     }
 
     /* Space between hamburgers */
-    &::before { top: -.8rem; }
-    &::after { top: .8rem; }
+    &::before { top: -8px; }
+    &::after { top: 8px; }
 }
 
 /* 
