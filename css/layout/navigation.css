@@ -35,7 +35,7 @@
 .nav__mobile--btn {
     /* display: none; */
     position: fixed;
-    top: 10px;
+    top: 11px;
     right: 10px;
     height: 35px;
     width: 55px;
@@ -51,8 +51,8 @@
 .nav__mobile--background {
     /* display: none; */
     position: fixed;
-    top: 13px;
-    right: 12px;
+    top: 14px;
+    right: 13px;
     height: 30px;
     width: 50px;
     z-index: 1000;
