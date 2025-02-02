@@ -20,3 +20,8 @@
 .portfolio__btn {
     margin: .5rem .5rem;
 }
+
+.portfolio__btn--highlight {
+    background-color: var(--colour-black);
+    color: var(--colour-tertiary);
+}
