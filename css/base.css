@@ -16,6 +16,7 @@ This font size defines the value of 1rem, as rem units are relative to the root 
 html {
     font-size : 50%;
     box-sizing: border-box;
+    /* scrollbar-gutter: stable; */
 }
 
 @media (min-width: 768px) {
