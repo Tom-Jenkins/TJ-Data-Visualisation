@@ -1,0 +1,24 @@
+.card {
+    width: fit-content;
+    height: auto;
+    background-color: var(--colour-white);
+    /* border: 4px solid var(--colour-secondary); */
+    color: var(--colour-primary);
+    font-size: 1.5rem;
+}
+
+.card__title {
+    background-color: var(--colour-primary);
+    color: var(--colour-white);
+    height: fit-content;
+    font-size: 1.7rem;
+    padding: .4rem 0;
+}
+
+.card__content {
+    padding: 1rem 0;
+
+    &:hover {
+        opacity: .6;
+    }
+}

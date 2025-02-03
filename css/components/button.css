@@ -11,8 +11,32 @@
     border-radius: 5px;
 
     &:hover {
-        background-color: var(--colour-black);
-        color: var(--colour-tertiary);
+        background-color: var(--colour-tertiary-dark);
+        /* color: var(--colour-tertiary); */
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.btn__dark {
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.20rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--colour-primary);
+    cursor: pointer;
+    border: 1.5px solid var(--colour-primary);
+    border-radius: 5px;
+
+    &:hover {
+        /* background-color: var(--colour-secondary);
+        color: var(--colour-white); */
+        background-color: var(--colour-tertiary);
+        color: var(--colour-black);
     }
 
     &:active {

@@ -3,6 +3,7 @@
 @import url("variables.css");
 
 @import url("components/button.css");
+@import url("components/card.css");
 
 @import url("layout/containers.css");
 @import url("layout/navigation.css");

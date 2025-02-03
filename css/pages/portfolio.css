@@ -24,8 +24,10 @@
 }
 
 .portfolio__btn--highlight {
-    background-color: var(--colour-black);
-    color: var(--colour-tertiary);
+    /* background-color: var(--colour-secondary);
+    color: var(--colour-white); */
+    background-color: var(--colour-tertiary);
+    color: var(--colour-black);
 }
 
 .portfolio__item--container {

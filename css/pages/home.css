@@ -49,25 +49,37 @@
     animation: reveal-left 1s ease-in-out forwards; /* Animation settings */
 }
 
-@keyframes reveal-left {
-0% {
-    opacity: 0;
-    transform: translateX(-100%); /* Start off-screen to the left */
-}
-100% {
-    opacity: 1;
-    transform: translateX(0); /* End in the visible position */
-}
-}
-
 .project {
     background-color: var(--colour-white);
-    color: var(--colour-primary);
     text-align: center;
+    padding: 1rem 0;
+}
+
+.project__title {
+    padding: 2rem 0;
+    color: var(--colour-black);
+}
+
+.project__subtitle {
+    padding: 2rem 0;
+    color: var(--colour-secondary);
+
+    & > h3 > a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: var(--colour-primary);
+        }
+    }
+}
+
+.project__content {
+    padding: 2rem 0;
 }
 
 .project__img {
-    width: 30rem;
+    width: 50rem;
 }
 
 .services {
