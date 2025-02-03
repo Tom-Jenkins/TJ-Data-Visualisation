@@ -4,6 +4,7 @@
     background-size: cover;
     background-blend-mode: screen;
     align-content: center;
+    padding-bottom: calc(var(--navbar-height)) !important;
 }
 
 .hero__main {
