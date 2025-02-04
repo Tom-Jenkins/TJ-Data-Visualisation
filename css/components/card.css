@@ -1,5 +1,5 @@
 .card {
-    width: fit-content;
+    width: 40rem;
     height: auto;
     background-color: var(--colour-white);
     /* border: 4px solid var(--colour-secondary); */
@@ -17,6 +17,10 @@
 
 .card__content {
     padding: 1rem 0;
+
+    & > a > img {
+        width: 100%;
+    }
 
     &:hover {
         opacity: .6;
