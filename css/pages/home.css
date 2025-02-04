@@ -56,12 +56,12 @@
 }
 
 .project__title {
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     color: var(--colour-black);
 }
 
 .project__subtitle {
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     color: var(--colour-secondary);
 
     & > h3 > a {
