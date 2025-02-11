@@ -43,8 +43,8 @@
     transform: translate(-50%, -50%) scale(.2);
     transition: all .4s .1s;
 
-    width: 75%;
-    height: 80%;
+    width: 90%;
+    height: min(90dvh, 90vh);;
     background-color: var(--colour-white);
     box-shadow: 0 2rem 4rem rgba(44, 44, 44, .2);
 
@@ -69,5 +69,14 @@
 
     &:active {
         transform: scale(.9);
+    }
+}
+
+/* Laptop/Desktop Screen Styles */
+@media (min-width: 768px) {
+
+    .popup__content {
+        width: 75%;
+        height: 80%;
     }
 }
