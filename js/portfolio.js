@@ -42,3 +42,30 @@ portfolioBtnContainer.addEventListener("click", (e) => {
         });
     };
 });
+
+// ---------- //
+// POPUPS
+// ---------- //
+
+// Add functinality to elements with popups on DOM content load
+document.addEventListener("DOMContentLoaded", () => {
+    const popupTriggers = document.querySelectorAll(".popup__trigger");
+    const popupCloses = document.querySelectorAll(".popup__close");
+
+    // Open popup event listener
+    popupTriggers.forEach(trigger => {
+        trigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetPopup = document.getElementById(this.dataset.target);
+            if (targetPopup) targetPopup.classList.add("popup--active");
+        });
+    });
+
+    // Close popup on click of X button
+    popupCloses.forEach(close => {
+        close.addEventListener("click", function (e) {
+            e.preventDefault();
+            this.closest(".popup").classList.remove("popup--active");
+        });
+    });
+});
