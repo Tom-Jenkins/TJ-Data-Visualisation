@@ -10,11 +10,6 @@ const portfolioBtns = document.querySelectorAll(".portfolio__btn");
 const portfolioBtnAll = document.querySelector(".portfolio__btn--1");
 const portfolioItems = document.querySelectorAll(".portfolio__item");
 
-// When page loads by default highlight the "ALL" button
-document.addEventListener("DOMContentLoaded", () => {
-    portfolioBtnAll.classList.add("portfolio__btn--highlight");
-});
-
 // Highlight the button the user clicks and subset portfolio items
 portfolioBtnContainer.addEventListener("click", (e) => {
     
