@@ -30,7 +30,6 @@
 }
 
 .hero__btn {
-    text-align: center;
     margin-top: 20px;
 }
 
@@ -79,7 +78,11 @@
 }
 
 .services {
-    background-color: var(--colour-grey);
+    background-color: var(--colour-secondary);
+}
+
+.services__title {
+    color: var(--colour-white);
 }
 
 .services__list {
