@@ -16,13 +16,37 @@
 }
 
 .card__content {
-    padding: 1rem 0;
+    padding-top: 1rem;
+    position: relative;
+    
 
     & > a > img {
+        display: block;
         width: 100%;
+        transition: all .4s;
+
+        &:hover {
+            opacity: .3;
+        }
     }
 
-    &:hover {
-        opacity: .6;
+    &:hover .card__icon {
+        transform: translate(-50%, -100%);
+        opacity: 1;
+        visibility: visible;
     }
+}
+
+.card__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+
+    width: 4rem;
+    height: 4rem;
+    fill: var(--colour-primary);
 }
