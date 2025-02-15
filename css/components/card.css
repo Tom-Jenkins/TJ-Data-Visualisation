@@ -18,22 +18,21 @@
 .card__content {
     padding-top: 1rem;
     position: relative;
-    
-
-    & > a > img {
-        display: block;
-        width: 100%;
-        transition: all .4s;
-
-        &:hover {
-            opacity: .3;
-        }
-    }
 
     &:hover .card__icon {
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -50%);
         opacity: 1;
         visibility: visible;
+    }
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    transition: all .4s;
+
+    &:hover {
+        opacity: .3;
     }
 }
 
@@ -46,7 +45,7 @@
     visibility: hidden;
     transition: all .4s;
 
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     fill: var(--colour-primary);
 }
