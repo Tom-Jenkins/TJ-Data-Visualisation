@@ -78,10 +78,6 @@
     padding: 2rem 0;
 }
 
-.project__img {
-    width: 50rem;
-}
-
 .services {
     background-color: var(--colour-grey);
 }
