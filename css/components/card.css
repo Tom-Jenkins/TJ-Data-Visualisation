@@ -2,7 +2,7 @@
     width: 40rem;
     height: auto;
     background-color: var(--colour-white);
-    /* border: 4px solid var(--colour-secondary); */
+    /* border: 1px solid var(--colour-secondary); */
     color: var(--colour-primary);
     font-size: 1.5rem;
 }
@@ -30,6 +30,9 @@
 .card__image {
     display: block;
     width: 100%;
+    width: -moz-available; 
+    width: -webkit-fill-available;
+    height: 25rem;
     transition: all .4s;
 
     &:hover {
