@@ -1,0 +1,30 @@
+.line {
+    position: relative;
+    width: 120px;
+    height: 2px;
+    background-color: black;
+    margin: 15px auto;
+}
+
+/* Circles */
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.line::before {
+    left: -5px; /* Position of circle at the start of line */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line::after {
+    right: -5px; /* Position of circle at the end of line */
+    top: 50%;
+    transform: translateY(-50%);
+}
