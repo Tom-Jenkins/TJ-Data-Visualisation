@@ -7,7 +7,7 @@
     --colour-primary-light-2: #C1CBCC;
     --colour-primary-light-3: #ECF0F1; */
 
-    --colour-primary-light: #6D7993;
+    --colour-primary-light: rgb(109, 121, 147);
     --colour-maroon: #96858F;
 
     --colour-primary: #333a56;
@@ -18,8 +18,6 @@
     --colour-tertiary: #f9f5dd;
     --colour-tertiary-dark: #f9f5dddc;
 
-    --colour-test: rgb(62, 195, 150);
-
     --colour-grey: #E8E8E8;
 
     --colour-white: #FDFDFD;
@@ -29,6 +27,8 @@
 
     --text-shadow-size-pos: 1px;
     --text-shadow-size-neg: -1px;
+
+    --section-bottom-padding: 2rem;
     
     --navbar-height: 55px;
     

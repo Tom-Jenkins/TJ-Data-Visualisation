@@ -51,7 +51,7 @@
 .project {
     background-color: var(--colour-white);
     text-align: center;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 
 .project__title {
@@ -74,19 +74,27 @@
 }
 
 .project__content {
-    padding: 2rem 0;
+    padding-bottom: var(--section-bottom-padding);
 }
 
 .services {
     background-color: var(--colour-secondary);
+    /* padding: 1rem 0; */
 }
 
 .services__title {
     color: var(--colour-white);
 }
 
-.services__list {
-    list-style: inside;
+.services__content {
+    padding-bottom: var(--section-bottom-padding);
+}
+
+.services__box {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    background-color: var(--colour-white);
 }
 
 .testimonials {
