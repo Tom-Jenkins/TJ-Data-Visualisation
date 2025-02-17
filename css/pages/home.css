@@ -80,7 +80,7 @@
 
 .services {
     background-color: var(--colour-secondary);
-    /* padding: 1rem 0; */
+    padding-bottom: var(--section-padding);
 }
 
 .services__title {
@@ -109,5 +109,12 @@
 
 #map {
     width: 100%;
-    height: 30rem;
+    height: 50rem;
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 100%;
+        height: 30rem;
+    }
 }
