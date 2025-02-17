@@ -52,6 +52,7 @@
     background-color: var(--colour-white);
     text-align: center;
     /* padding: 1rem 0; */
+    padding-bottom: var(--section-padding);
 }
 
 .project__title {
@@ -74,7 +75,7 @@
 }
 
 .project__content {
-    padding-bottom: var(--section-bottom-padding);
+    padding-bottom: var(--section-padding);
 }
 
 .services {
@@ -86,9 +87,9 @@
     color: var(--colour-white);
 }
 
-.services__content {
+/* .services__content {
     padding-bottom: var(--section-bottom-padding);
-}
+} */
 
 .services__box {
     width: 30rem;
@@ -99,6 +100,7 @@
 
 .testimonials {
     background-color: var(--colour-white);
+    padding-bottom: var(--section-padding);
 }
 
 .contact {
