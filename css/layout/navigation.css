@@ -16,7 +16,7 @@
 .navbar__logo--container {
     display: inline-block;
     align-content: center;
-    height: 80%;
+    height: 35px;
     margin-left: 10px;
 }
 
@@ -28,243 +28,244 @@
     height: inherit;
 }
 
-/* Mobile Screen Styles */
+/* Laptop/Desktop Screen Styles */
 .nav__mobile {
-    color: var(--color-black);
-    user-select: none;
-}
-
-.nav__mobile--checkbox {
     display: none;
-}
-
-.nav__mobile--btn {
-    /* display: none; */
-    position: fixed;
-    top: 11px;
-    right: 8px;
-    height: 35px;
-    width: 55px;
-    z-index: 2000;
-    border-radius: 3px;
-    
-    background-color: white;
-    cursor: pointer;
-    /* box-shadow: 0 0 2rem var(--colour-black); */
-    /* text-align: center; */
-}
-
-.nav__mobile--background {
-    /* display: none; */
-    position: fixed;
-    top: 14px;
-    right: 11px;
-    height: 30px;
-    width: 50px;
-    z-index: 1000;
-    border-radius: 3px;
-    
-    background-image: radial-gradient(var(--colour-secondary), var(--colour-primary));
-    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* When checked apply styles to input sibling – i.e. the background */
-.nav__mobile--checkbox:checked ~ .nav__mobile--background {
-    transform: scale(var(--scale-factor));
-}
-
-/* Style hamburger icon */
-.nav__mobile--icon {
-    position: relative;
-    margin-top: 17px;
-    margin-left: 12.8px;
-
-    &,
-    &::before,
-    &::after {
-        display: inline-block;
-        width: 30px; /* hamburger width */
-        height: 1.5px; /* hamburger line thickness */
-        background-color: var(--colour-primary);
-    }
-
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        transition: all .2s;
-    }
-
-    /* Space between hamburgers */
-    &::before { top: -8px; }
-    &::after { top: 8px; }
-}
-
-/* 
-The "+" is used because checkbox is adjacent sibling to button
-Then select the button child element (icon)
-*/
-.nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon {
-    background-color: transparent;
-}
-
-/* Rotate outer hamburger lines */
-.nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon::before {
-    top: 0;
-    transform: rotate(135deg);
-}
-.nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon::after {
-    top: 0;
-    transform: rotate(-135deg);
-}
-
-/* When checked apply styles to input sibling – mobile nanigation menu */
-.nav__mobile--checkbox:checked ~ .nav__mobile--menu {
-    opacity: 1;
-    width: 100%;
-    pointer-events: auto;
-}
-
-/* Mobile navigation menu when hamburger icon clicked */
-.nav__mobile--menu {
-    height: 100vh;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1500;
-    border-radius: 10px;
-    pointer-events: none;
-
-    /* Hide navigation list by default */
-    opacity: 0;
-    transition: opacity .7s ease-in .2s;
-}
-
-/* When unchecked apply these styles */
-.nav__mobile--checkbox:not(:checked) ~ .nav__mobile--menu {
-    opacity: 0;
-    transition: opacity .3s linear;
-}
-
-.nav__mobile--list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-}
-
-.nav__mobile--item {
-    display: inline-block;
-    margin: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-    font-size: 3rem;
-    font-weight: 700;
-}
-                
-.nav__mobile--link {
-    &:link,
-    &:visited {
-        color: var(--colour-white);
-        text-decoration: none;
-        padding: 1rem 4rem;
-        border-radius: 10px;
-        
-        /* Initial state without animations */
-        background-size: 0% 100%;
-        background-repeat: no-repeat;
-        background-position: left;
-    }         
-
-    &:hover {
-        background-image: linear-gradient(to right, var(--colour-white) 0%, var(--colour-white) 100%);
-        background-size: 100% 100%;
-        color: var(--colour-black);
-
-        /* Add animation only for hover */
-        transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
-
-    &:active {
-        /* Need to cancel animation states on hover so that this works */
-        background-image: none;
-        transition: none;
-        
-        background-color: var(--colour-white);
-        color: var(--colour-black);
-        font-weight: 900;
-        transform: scale(0.95); /* Adjust size of button */
-    }
 }
 
 .nav__laptop {
-    display: none;
+    display: inline-block;
+    align-content: center;
+    height: inherit;
+    padding-right: 10px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    /* border-radius: 10px;   */
 }
 
-/* Laptop/Desktop Screen Styles */
-@media (min-width: 768px) {
+.nav__laptop--btn {
+    display: inline-block;
+    align-content: center;
+    height: 70%;
+    padding: 0 .5rem;
+    margin: auto .5rem;
+    color: var(--colour-white);
+    text-decoration: none;
     
+    /* background-color: var(--colour-black); */
+    /* border-radius: inherit; */
+
+    /* Initial state without animations */
+    /* background-size: 100% 0%;
+    background-repeat: no-repeat;
+    background-position: bottom; */
+
+    /* State on hover */
+    &:hover {
+        /* background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
+        background-size: 100% 100%; */
+        /* Add animation only for hover */
+        /* transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out; */
+
+        /* background-color: var(--colour-white);
+        color: var(--colour-black); */
+        height: 65%;
+        border-bottom: .2rem solid var(--colour-white);
+        transition: border-bottom .1s ease-in;
+    }
+
+    /* State during mousedown */
+    &:active {
+        /* Need to cancel animation states on hover so that this works */
+        /* background-image: none;
+        transition: none; */
+        /* transform: scale(0.95); */
+
+        background-color: var(--colour-white);
+        color: var(--colour-black);
+    }
+}
+
+ /* Mobile Screen Styles */
+@media (max-width: 768px) {
+   
     .nav__mobile {
+        display: block;
+        color: var(--color-black);
+        user-select: none;
+    }
+
+    .nav__mobile--checkbox {
         display: none;
     }
 
-    .nav__laptop {
-        display: inline-block;
-        align-content: center;
-        height: inherit;
-        padding-right: 10px;
-        font-size: 1.4rem;
-        font-weight: 400;
-        letter-spacing: 0.35rem;
-        text-transform: uppercase;
+    .nav__mobile--btn {
+        /* display: none; */
+        position: fixed;
+        top: 11px;
+        right: 8px;
+        height: 35px;
+        width: 55px;
+        z-index: 2000;
+        border-radius: 3px;
         
-        /* border-radius: 10px;   */
+        background-color: white;
+        cursor: pointer;
+        /* box-shadow: 0 0 2rem var(--colour-black); */
+        /* text-align: center; */
     }
-    
-    .nav__laptop--btn {
-        display: inline-block;
-        align-content: center;
-        height: 70%;
-        padding: 0 .5rem;
-        margin: auto .5rem;
-        color: var(--colour-white);
-        text-decoration: none;
+
+    .nav__mobile--background {
+        /* display: none; */
+        position: fixed;
+        top: 14px;
+        right: 11px;
+        height: 30px;
+        width: 50px;
+        z-index: 1000;
+        border-radius: 3px;
         
-        /* background-color: var(--colour-black); */
-        /* border-radius: inherit; */
+        background-image: radial-gradient(var(--colour-secondary), var(--colour-primary));
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
 
-        /* Initial state without animations */
-        /* background-size: 100% 0%;
-        background-repeat: no-repeat;
-        background-position: bottom; */
-    
-        /* State on hover */
-        &:hover {
-            /* background-image: linear-gradient(var(--colour-white) 0%, var(--colour-white) 100%);
-            background-size: 100% 100%; */
-            /* Add animation only for hover */
-            /* transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out; */
+    /* When checked apply styles to input sibling – i.e. the background */
+    .nav__mobile--checkbox:checked ~ .nav__mobile--background {
+        transform: scale(var(--scale-factor));
+    }
 
-            /* background-color: var(--colour-white);
-            color: var(--colour-black); */
-            height: 65%;
-            border-bottom: .2rem solid var(--colour-white);
-            transition: border-bottom .1s ease-in;
+    /* Style hamburger icon */
+    .nav__mobile--icon {
+        position: relative;
+        margin-top: 17px;
+        margin-left: 12.8px;
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 30px; /* hamburger width */
+            height: 1.5px; /* hamburger line thickness */
+            background-color: var(--colour-primary);
         }
-    
-        /* State during mousedown */
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        /* Space between hamburgers */
+        &::before { top: -8px; }
+        &::after { top: 8px; }
+    }
+
+    /* 
+    The "+" is used because checkbox is adjacent sibling to button
+    Then select the button child element (icon)
+    */
+    .nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon {
+        background-color: transparent;
+    }
+
+    /* Rotate outer hamburger lines */
+    .nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .nav__mobile--checkbox:checked + .nav__mobile--btn .nav__mobile--icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    /* When checked apply styles to input sibling – mobile nanigation menu */
+    .nav__mobile--checkbox:checked ~ .nav__mobile--menu {
+        opacity: 1;
+        width: 100%;
+        pointer-events: auto;
+    }
+
+    /* Mobile navigation menu when hamburger icon clicked */
+    .nav__mobile--menu {
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1500;
+        border-radius: 10px;
+        pointer-events: none;
+
+        /* Hide navigation list by default */
+        opacity: 0;
+        transition: opacity .7s ease-in .2s;
+    }
+
+    /* When unchecked apply these styles */
+    .nav__mobile--checkbox:not(:checked) ~ .nav__mobile--menu {
+        opacity: 0;
+        transition: opacity .3s linear;
+    }
+
+    .nav__mobile--list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+    }
+
+    .nav__mobile--item {
+        display: inline-block;
+        margin: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+                    
+    .nav__mobile--link {
+        &:link,
+        &:visited {
+            color: var(--colour-white);
+            text-decoration: none;
+            padding: 1rem 4rem;
+            border-radius: 10px;
+            
+            /* Initial state without animations */
+            background-size: 0% 100%;
+            background-repeat: no-repeat;
+            background-position: left;
+        }         
+
+        &:hover {
+            background-image: linear-gradient(to right, var(--colour-white) 0%, var(--colour-white) 100%);
+            background-size: 100% 100%;
+            color: var(--colour-black);
+
+            /* Add animation only for hover */
+            transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
         &:active {
             /* Need to cancel animation states on hover so that this works */
-            /* background-image: none;
-            transition: none; */
-            /* transform: scale(0.95); */
-
+            background-image: none;
+            transition: none;
+            
             background-color: var(--colour-white);
             color: var(--colour-black);
+            font-weight: 900;
+            transform: scale(0.95); /* Adjust size of button */
         }
     }
+
+    .nav__laptop {
+        display: none;
+    }
+    
 }
