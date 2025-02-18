@@ -45,6 +45,7 @@ window.addEventListener("load", () => {
 // On window resize
 window.addEventListener("resize", updateScaleFactor);
 
+
 // Event listener to remove overflow scroll bar from body when navigation icon clicked
 const navCheckbox = document.querySelector(".nav__mobile--checkbox");
 navCheckbox.addEventListener("change", () => {
@@ -55,4 +56,16 @@ navCheckbox.addEventListener("change", () => {
         document.body.style.overflowX = "hidden";
         // document.querySelector(".navigation__nav").style.transition = "none";
     };
+});
+
+
+// Close mobile menu when a navigation link is clicked
+// Ensures section anchors (e.g. index.html#services) close after clicked when on home page
+document.querySelectorAll(".nav__mobile--link").forEach(link => {
+    link.addEventListener("click", function () {
+        const checkbox = document.getElementById("nav__toggle");
+        if (checkbox) {
+            checkbox.checked = false; // uncheck the checkbox to close the menu
+        }
+    });
 });
