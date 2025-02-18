@@ -238,29 +238,19 @@
             border-radius: 10px;
             
             /* Initial state without animations */
-            background-size: 0% 100%;
+            /* background-size: 0% 100%;
             background-repeat: no-repeat;
-            background-position: left;
+            background-position: left; */
         }         
 
         &:hover {
-            background-image: linear-gradient(to right, var(--colour-white) 0%, var(--colour-white) 100%);
-            background-size: 100% 100%;
+            /* background-image: linear-gradient(to right, var(--colour-white) 0%, var(--colour-white) 100%);
+            background-size: 100% 100%; */
+            background-color: var(--colour-white);
             color: var(--colour-black);
 
             /* Add animation only for hover */
-            transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        &:active {
-            /* Need to cancel animation states on hover so that this works */
-            background-image: none;
-            transition: none;
-            
-            background-color: var(--colour-white);
-            color: var(--colour-black);
-            font-weight: 900;
-            transform: scale(0.95); /* Adjust size of button */
+            /* transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out; */
         }
     }
 
