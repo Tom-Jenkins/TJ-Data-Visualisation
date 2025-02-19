@@ -74,7 +74,8 @@ document.querySelectorAll(".nav__mobile--link").forEach(link => {
             checkbox.checked = false;
 
             // Temporarily switch state to portfolio to fix scrolling issue (not perfect but works)
-            history.pushState(null, "", "http://127.0.0.1:8080/portfolio.html");
+            const host = window.location.host;
+            history.pushState(host, "", `portfolio.html`);
         };
         
     });
