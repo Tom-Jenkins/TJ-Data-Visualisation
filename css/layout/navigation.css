@@ -48,7 +48,7 @@
 .nav__laptop--btn {
     display: inline-block;
     align-content: center;
-    height: 70%;
+    height: 65%;
     padding: 0 .5rem;
     margin: auto .5rem;
     color: var(--colour-white);
