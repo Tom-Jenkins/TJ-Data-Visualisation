@@ -33,14 +33,14 @@ function updateScaleFactor() {
     document.documentElement.style.setProperty("--scale-factor", scaleFactor);
 }
 
+
 // On window load
 window.addEventListener("load", () => {
     // Update the scale factor
     updateScaleFactor();
 
-    // Run hero image animation
-    // document.querySelector(".hero__image").classList.add("hero__image--open");
 });
+
 
 // On window resize
 window.addEventListener("resize", updateScaleFactor);
@@ -59,13 +59,23 @@ navCheckbox.addEventListener("change", () => {
 });
 
 
-// Close mobile menu when a navigation link is clicked
-// Ensures section anchors (e.g. index.html#services) close after clicked when on home page
+// Close mobile menu when services or contact link is clicked
+// Ensures menu closes and home page remains scrollable
 document.querySelectorAll(".nav__mobile--link").forEach(link => {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (e) {
         const checkbox = document.getElementById("nav__toggle");
-        if (checkbox) {
-            checkbox.checked = false; // uncheck the checkbox to close the menu
-        }
+
+        if (link.innerHTML === "Services" || link.innerHTML === "Contact") {
+            
+            // Prevent immediate navigation
+            // e.preventDefault();
+
+            // Close the menu by unchecking checkbox
+            checkbox.checked = false;
+
+            // Temporarily switch state to portfolio to fix scrolling issue (not perfect but works)
+            history.pushState(null, "", "http://127.0.0.1:8080/portfolio.html");
+        };
+        
     });
 });
