@@ -1,8 +1,5 @@
 .portfolio {
     background-color: var(--colour-white);
-    /* background-image: linear-gradient(to right bottom, var(--colour-primary), var(--colour-secondary)), url(../../images/cover.JPG);
-    background-size: cover;
-    background-blend-mode: screen; */
 }
 
 .portfolio__title {
@@ -31,7 +28,8 @@
 }
 
 .portfolio__item--container {
-    padding: 1rem 0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .portfolio__item--hide {
