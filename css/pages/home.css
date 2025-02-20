@@ -1,6 +1,6 @@
 .hero {
     /* background-image: linear-gradient(var(--colour-primary), var(--colour-secondary)); */
-    background-image: linear-gradient(to top, var(--colour-primary), var(--colour-primary-dark)), url(../../images/cover4.JPG);
+    background-image: linear-gradient(to top, var(--colour-primary), var(--colour-primary-dark)), url(../../images/cover4-min.JPG);
     background-size: cover;
     background-blend-mode: screen;
     align-content: center;
