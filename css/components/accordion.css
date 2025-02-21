@@ -6,7 +6,9 @@
 
 .accordion--open {
     visibility: visible;
-    max-height: 50rem;
+    max-height: 30rem;
+    /* background-color: var(--colour-secondary); */
+    background-image: linear-gradient(to bottom, var(--colour-primary) 0%, var(--colour-secondary) 2%, var(--colour-secondary) 100%);
     transition: all .5s ease-in-out;
 }
 

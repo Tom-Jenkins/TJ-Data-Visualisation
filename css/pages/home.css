@@ -74,15 +74,17 @@
     }
 }
 
-.project__content {
-    padding-bottom: var(--section-padding);
+.project__box--container {
+    /* Require to ensure accordions open and close independently */
+    align-items: self-start;
+
+    margin-bottom: 4.5rem;
 }
 
 .project__box {
     width: 40rem;
     height: auto;
-    /* background-color: var(--colour-secondary); */
-    background-image: linear-gradient(to bottom, var(--colour-primary) 75%, var(--colour-secondary) 100%);
+    background-image: linear-gradient(to bottom, var(--colour-primary) 0%, var(--colour-primary) 75%, var(--colour-secondary) 100%);
     color: var(--colour-white);
     box-shadow: 0 .5px 10px 0 var(--colour-primary);
     /* border-radius: 10px; */
@@ -110,6 +112,10 @@
         fill: var(--colour-tertiary);
         cursor: pointer;
     }
+}
+
+.project__portfolio {
+    margin-top: 4rem;
 }
 
 .services {
