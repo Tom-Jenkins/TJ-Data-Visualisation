@@ -15,3 +15,28 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 // Add marker
 const marker = L.marker(coords).addTo(map);
+
+
+// ---------- //
+// PROJECT ACCORDION
+// ---------- //
+
+// Get elements from DOM
+const arrowLinks = document.querySelectorAll(".project__arrow");
+
+// Open or close accordion when arrow is clicked
+arrowLinks.forEach(link => {
+    link.addEventListener("click", function () {
+
+        const accordionID = document.getElementById(`accordion--${link.dataset.target}`);
+
+        if (link.classList.contains("accordion--active")) {
+            accordionID.classList.remove("accordion--open"); // close accordion
+            link.classList.remove("accordion--active"); // rotate arrow to original position
+        } else {
+            accordionID.classList.add("accordion--open"); // open accordion
+            link.classList.add("accordion--active"); // rotate arrow
+        };
+    });
+});
+

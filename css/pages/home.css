@@ -82,7 +82,7 @@
     width: 40rem;
     height: auto;
     /* background-color: var(--colour-secondary); */
-    background-image: linear-gradient(to bottom, var(--colour-primary) 80%, var(--colour-secondary) 100%);
+    background-image: linear-gradient(to bottom, var(--colour-primary) 75%, var(--colour-secondary) 100%);
     color: var(--colour-white);
     box-shadow: 0 .5px 10px 0 var(--colour-primary);
     /* border-radius: 10px; */
@@ -94,8 +94,8 @@
 }
 
 .project__icon {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     padding: .5rem;
     fill: var(--colour-white);
 }
@@ -104,16 +104,12 @@
     width: 2.5rem;
     height: 2.5rem;
     fill: var(--colour-white);
+    transition: all .3s;
 
     &:hover {
         fill: var(--colour-tertiary);
         cursor: pointer;
     }
-}
-
-.project__accordion {
-    visibility: hidden;
-    height: 0;
 }
 
 .services {

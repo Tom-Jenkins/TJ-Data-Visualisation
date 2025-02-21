@@ -2,6 +2,7 @@
 @import url("typography.css");
 @import url("variables.css");
 
+@import url("components/accordion.css");
 @import url("components/animations.css");
 @import url("components/button.css");
 @import url("components/card.css");

@@ -8,6 +8,5 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* padding: 1rem 1rem; */
     gap: 5rem;
 }
