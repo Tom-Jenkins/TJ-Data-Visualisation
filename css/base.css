@@ -35,7 +35,7 @@ body {
 
 section {
     text-align: center;
-    /* padding: 1rem; */
+    padding: 1rem;
 
     /* section matches navbar height when anchor clicked */
     scroll-margin-top: var(--navbar-height);
