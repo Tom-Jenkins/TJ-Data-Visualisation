@@ -46,6 +46,7 @@ portfolioBtnContainer.addEventListener("click", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
     const popupTriggers = document.querySelectorAll(".popup__trigger");
     const popupCloses = document.querySelectorAll(".popup__close");
+    const popupClosesBtn = document.querySelectorAll(".popup__close--btn");
 
     // Open popup event listener
     popupTriggers.forEach(trigger => {
@@ -56,8 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Close popup on click of X button
+    // Close popup on click of X (top-right)
     popupCloses.forEach(close => {
+        close.addEventListener("click", function (e) {
+            e.preventDefault();
+            this.closest(".popup").classList.remove("popup--active");
+        });
+    });
+
+    // Close popup on click of close button
+    popupClosesBtn.forEach(close => {
         close.addEventListener("click", function (e) {
             e.preventDefault();
             this.closest(".popup").classList.remove("popup--active");
