@@ -28,7 +28,8 @@
     --text-shadow-size-pos: 1px;
     --text-shadow-size-neg: -1px;
 
-    --section-padding: 2rem;
+    --section-padding-vertical: 2rem;
+    --section-padding-horizontal: 1rem;
     
     --navbar-height: 55px;
     
