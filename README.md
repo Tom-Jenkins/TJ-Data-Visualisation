@@ -1,11 +1,12 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9d193b4d-77d9-46dd-8114-17f215d5872c/deploy-status)](https://tjdatavisualisation.netlify.app/)
 
-# <picture><source srcset="images/logo-dark.svg" media="(prefers-color-scheme: dark)"><img src="images/logo.svg" alt="TJ Data Visualisation logo" height="25"></picture> Data Visualisation
+# Tom Jenkins Data Visualisation
 
-<picture>
-  <source srcset="images/logo-dark.svg" media="(prefers-color-scheme: dark)">
-  <img src="images/logo.svg" alt="TJ Data Visualisation logo" width="200">
-</picture>
+<div style="margin-top: 35px;">
+<img style="float: left; margin-right: 30px; margin-top: -6px;" src="images/logo-dark.svg" alt="TJ Data Visualisation logo" height="50" />
 
-<br>
-Website for my freelance business Tom Jenkins Data Visualisation. I designed and developed this site from scratch using vanilla JavaScript, CSS and HTML.
+<p>
+Website for my freelance business Tom Jenkins Data Visualisation. I designed and developed this site from scratch using vanilla JavaScript, CSS and HTML.    
+</p>
+
+</div>
