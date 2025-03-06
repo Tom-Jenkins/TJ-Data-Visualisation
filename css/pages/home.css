@@ -123,12 +123,49 @@
 }
 
 
+.about {
+    background-color: var(--colour-grey-blue);
+}
+
+.about__content {
+    display: flex;
+    align-items: normal; /* Aligns text to the middle of the logo */
+    gap: 2rem; /* Adds spacing between the logo and text */
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.about__logo {
+    width: 20rem;
+    height: auto;
+    fill: var(--colour-primary); 
+    flex-shrink: 0; 
+}
+
+.about__text {
+    flex: 1; /* Allows text to take up remaining space */
+}
+
+@media (max-width: 768px) {
+    .about__content {
+        flex-direction: column; /* Stacks the logo and text vertically */
+        align-items: center; /* Centers the logo and text */
+        gap: 4rem;
+        padding: 0 2rem;
+    }
+    .about__logo {
+        width: 10rem;
+    }
+}
+
+
 .services {
-    background-color: var(--colour-secondary);
+    background-color: var(--colour-white);
+    /* background-image: linear-gradient(to top, var(--colour-grey-blue), var(--colour-secondary)); */
 }
 
 .services__title {
-    color: var(--colour-white);
+    color: var(--colour-black);
 }
 
 /* .services__content {
@@ -140,6 +177,7 @@
     height: 30rem;
     border-radius: 50%;
     background-color: var(--colour-white);
+    opacity: .8;
 }
 
 

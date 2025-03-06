@@ -16,9 +16,11 @@
     --colour-secondary: #52658F;
 
     --colour-tertiary: #f9f5dd;
-    --colour-tertiary-dark: #f9f5dddc;
+    --colour-tertiary-light: #fffefa;
+    --colour-tertiary-dark: #e0dbbf;
 
     --colour-grey: #F5F5F5;
+    --colour-grey-blue: #f8f9fa;
 
     --colour-white: #FDFDFD;
     --colour-black: #2c2c2c;
