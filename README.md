@@ -2,11 +2,10 @@
 
 # Tom Jenkins Data Visualisation
 
-<div style="margin-top: 35px;">
-<img style="float: left; margin-right: 30px; margin-top: -6px;" src="images/logo-dark.svg" alt="TJ Data Visualisation logo" height="50" />
+<img src="images/logo-dark.svg" alt="TJ Data Visualisation logo" height="50" /><br/>
 
-<p>
-Website for my freelance business Tom Jenkins Data Visualisation. I designed and developed this site from scratch using vanilla JavaScript, CSS and HTML.    
-</p>
+<br>
+> Website for my freelance business Tom Jenkins Data Visualisation. I designed and developed this site from scratch using vanilla JavaScript, CSS and HTML.    
+
 
 </div>
