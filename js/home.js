@@ -75,3 +75,21 @@ arrowLinks.forEach(link => {
     });
 });
 
+// Get elements from DOM
+const accordionLinks = document.querySelectorAll(".project__plus");
+
+// Open or close accordion when arrow is clicked
+accordionLinks.forEach(link => {
+    link.addEventListener("click", function () {
+
+        const accordionID = document.getElementById(`accordion--${link.dataset.target}`);
+
+        if (link.classList.contains("accordion--active")) {
+            accordionID.classList.remove("accordion--open"); // close accordion
+            link.classList.remove("accordion--active"); // rotate arrow to original position
+        } else {
+            accordionID.classList.add("accordion--open"); // open accordion
+            link.classList.add("accordion--active"); // rotate arrow
+        };
+    });
+});

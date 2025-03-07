@@ -35,7 +35,10 @@ body {
 
 section {
     text-align: center;
-    padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+    padding-top: var(--section-padding-vertical);
+    padding-bottom: calc(var(--section-padding-vertical) + 1.5rem);
+    padding-left: var(--section-padding-horizontal);
+    padding-right: var(--section-padding-horizontal);
 
     /* section matches navbar height when anchor clicked */
     scroll-margin-top: var(--navbar-height);

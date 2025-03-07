@@ -3,7 +3,8 @@
     --colour-primary: #333a56;
     --colour-primary-dark: rgba(51, 58, 87, 0.373);
 
-    --colour-secondary: #B0C4DE;
+    --colour-secondary: #52658F;
+    --colour-secondary-dark: #44577E;
 
     --colour-tertiary: #f9f5dd;
     --colour-tertiary-light: #fffefa;
@@ -20,8 +21,8 @@
     --text-shadow-size-pos: 1px;
     --text-shadow-size-neg: -1px;
 
-    --section-padding-vertical: 2rem;
-    --section-padding-horizontal: 2rem;
+    --section-padding-vertical: 3rem;
+    --section-padding-horizontal: 3rem;
     
     --navbar-height: 55px;
     
