@@ -4,7 +4,7 @@
 
 <img src="images/logo-dark.svg" alt="TJ Data Visualisation logo" height="50" /><br/>
 
-> Website for my freelance business Tom Jenkins Data Visualisation. I designed and developed this site from scratch using vanilla JavaScript, CSS and HTML.    
+> Website for my freelance business Tom Jenkins Data Visualisation. I designed and developed this site using vanilla JavaScript, CSS and HTML.    
 
 
 </div>

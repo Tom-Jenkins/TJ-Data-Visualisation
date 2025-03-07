@@ -7,8 +7,8 @@
     & > p {
         padding: 0;
         text-align: center;
-        text-transform: lowercase;
-        font-style: italic;
+        /* text-transform: lowercase; */
+        /* font-style: italic; */
     }
 }
 

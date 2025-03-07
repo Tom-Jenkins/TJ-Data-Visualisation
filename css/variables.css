@@ -1,23 +1,13 @@
 :root {
     
-    /* --colour-primary: #2C3E50;
-    --colour-primary-2: #24507b;
-    --colour-primary-light: #61727B;
-    --colour-primary-light-1: #95A5A6;
-    --colour-primary-light-2: #C1CBCC;
-    --colour-primary-light-3: #ECF0F1; */
-
-    --colour-primary-light: rgb(109, 121, 147);
-    --colour-maroon: #96858F;
-
     --colour-primary: #333a56;
-    --colour-primary-dark: #333a565f;
+    --colour-primary-dark: rgba(51, 58, 87, 0.373);
 
-    --colour-secondary: #52658F;
+    --colour-secondary: #B0C4DE;
 
     --colour-tertiary: #f9f5dd;
     --colour-tertiary-light: #fffefa;
-    --colour-tertiary-dark: #e0dbbf;
+    --colour-tertiary-dark: #F8F4D0;
 
     --colour-grey: #F5F5F5;
     --colour-grey-blue: #f8f9fa;
@@ -31,7 +21,7 @@
     --text-shadow-size-neg: -1px;
 
     --section-padding-vertical: 2rem;
-    --section-padding-horizontal: 1rem;
+    --section-padding-horizontal: 2rem;
     
     --navbar-height: 55px;
     
