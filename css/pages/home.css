@@ -200,30 +200,21 @@
     width: 50rem;
     height: auto;
     background-color: var(--colour-secondary-dark);
-    color: var(--colour-white);
+    color: var(--colour-grey-blue);
     box-shadow: 0 .5px 10px 0 var(--colour-primary);
     border-radius: 10px;
-    cursor: pointer;
     /* top right bottom left */
     padding: 1.5rem 1rem 1.5rem 2rem;
-
-    &:hover {
-        background-color: var(--colour-secondary);
-        /* color: var(--colour-tertiary); */
-    }
 
     & > h3 {
         text-align: start;
         font-size: 2.5rem;
         position: relative;
+        cursor: pointer;
 
         & > span {
             margin-left: 5rem;
         }
-    }
-
-    & > hr {
-        margin: 2rem 1.5rem;
     }
 }
 
@@ -237,27 +228,36 @@
     fill: var(--colour-white);
 }
 
-.project__arrow {
+.project__plus {
     position: absolute;
-    top: .7rem;
+    top: .3rem;
     right: 0;
     width: 3.5rem;
     height: 3.5rem;
-    fill: var(--colour-white);
-    transition: all .3s;
 
-    &:hover {
-        fill: var(--colour-tertiary);
-        /* cursor: pointer; */
-        /* transform: scale(1.2); */
-    }
+    opacity: 1;
+    transition: all .3s ease;
 }
 
-.project__plus {
+.project__plus--hidden {
+    opacity: 0;
+    transform: rotate(360deg);
+    transition: all .8s ease;
+}
+
+.project__minus {
     position: absolute;
-    top: 0;
+    top: .3rem;
     right: 0;
-    font-size: inherit;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.project__minus--show {
+    opacity: 1;
 }
 
 .project__portfolio--btn {

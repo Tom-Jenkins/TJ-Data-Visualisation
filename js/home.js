@@ -57,39 +57,19 @@ L.control.scale({imperial: false}).addTo(map);
 // ---------- //
 
 // Get elements from DOM
-const arrowLinks = document.querySelectorAll(".project__arrow");
-
-// Open or close accordion when arrow is clicked
-arrowLinks.forEach(link => {
-    link.addEventListener("click", function () {
-
-        const accordionID = document.getElementById(`accordion--${link.dataset.target}`);
-
-        if (link.classList.contains("accordion--active")) {
-            accordionID.classList.remove("accordion--open"); // close accordion
-            link.classList.remove("accordion--active"); // rotate arrow to original position
-        } else {
-            accordionID.classList.add("accordion--open"); // open accordion
-            link.classList.add("accordion--active"); // rotate arrow
-        };
-    });
-});
-
-// Get elements from DOM
-const accordionLinks = document.querySelectorAll(".project__plus");
+const accordionLinks = document.querySelectorAll(".project__box > h3");
 
 // Open or close accordion when arrow is clicked
 accordionLinks.forEach(link => {
     link.addEventListener("click", function () {
 
         const accordionID = document.getElementById(`accordion--${link.dataset.target}`);
+        const plusIcon = document.querySelector(`h3[data-target=${link.dataset.target}] .project__plus`);
+        const minusIcon = document.querySelector(`h3[data-target=${link.dataset.target}] .project__minus`);
 
-        if (link.classList.contains("accordion--active")) {
-            accordionID.classList.remove("accordion--open"); // close accordion
-            link.classList.remove("accordion--active"); // rotate arrow to original position
-        } else {
-            accordionID.classList.add("accordion--open"); // open accordion
-            link.classList.add("accordion--active"); // rotate arrow
-        };
+        accordionID.classList.toggle("accordion--open");
+        link.classList.toggle("accordion--open");
+        plusIcon.classList.toggle("project__plus--hidden");
+        minusIcon.classList.toggle("project__minus--show");
     });
 });
