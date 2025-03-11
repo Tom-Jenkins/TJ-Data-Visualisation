@@ -16,7 +16,6 @@ This font size defines the value of 1rem, as rem units are relative to the root 
 html {
     font-size : 62.5%;
     box-sizing: border-box;
-    -webkit-text-size-adjust: 100%;
 }
 
 @media (max-width: 768px) {
