@@ -65,7 +65,7 @@ document.querySelectorAll(".nav__mobile--link").forEach(link => {
     link.addEventListener("click", function (e) {
         const checkbox = document.getElementById("nav__toggle");
 
-        if (link.innerHTML === "Services" || link.innerHTML === "Contact") {
+        if (link.innerHTML === "Services" || link.innerHTML === "Contact" || link.innerHTML === "About") {
             
             // Prevent immediate navigation
             // e.preventDefault();
