@@ -64,12 +64,12 @@ accordionLinks.forEach(link => {
     link.addEventListener("click", function () {
 
         const accordionID = document.getElementById(`accordion--${link.dataset.target}`);
-        const plusIcon = document.querySelector(`h3[data-target=${link.dataset.target}] .project__plus`);
-        const minusIcon = document.querySelector(`h3[data-target=${link.dataset.target}] .project__minus`);
+        const plusIcon = document.querySelector(`h3[data-target=${link.dataset.target}] .accordion__plus`);
+        const minusIcon = document.querySelector(`h3[data-target=${link.dataset.target}] .accordion__minus`);
 
         accordionID.classList.toggle("accordion--open");
         link.classList.toggle("accordion--open");
-        plusIcon.classList.toggle("project__plus--hidden");
-        minusIcon.classList.toggle("project__minus--show");
+        plusIcon.classList.toggle("accordion__plus--hidden");
+        minusIcon.classList.toggle("accordion__minus--show");
     });
 });

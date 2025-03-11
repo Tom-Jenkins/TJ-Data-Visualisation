@@ -1,8 +1,12 @@
 .hero {
-    /* background-image: linear-gradient(var(--colour-primary), var(--colour-secondary)); */
-    background-image: linear-gradient(to top, var(--colour-primary), var(--colour-primary-dark)), url(../../images/cover4-min.JPG);
+    /* background-image: linear-gradient(to top, var(--colour-primary), rgba(51, 58, 86, .35)), url(../../images/cover4-min.JPG);
+    background-blend-mode: screen; */
+
+    background-image: linear-gradient(to top, var(--colour-primary-opacity-bottom), var(--colour-primary-opacity-top)), url(../../images/cover.jpg);
+    background-blend-mode: normal;
+
     background-size: cover;
-    background-blend-mode: screen;
+    background-position: top center;
     align-content: center;
     padding-bottom: calc(var(--navbar-height)) !important;
 }
@@ -216,48 +220,6 @@
             margin-left: 5rem;
         }
     }
-}
-
-.project__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4rem;
-    height: 4rem;
-    padding: .5rem;
-    fill: var(--colour-white);
-}
-
-.project__plus {
-    position: absolute;
-    top: .3rem;
-    right: 0;
-    width: 3.5rem;
-    height: 3.5rem;
-
-    opacity: 1;
-    transition: all .3s ease;
-}
-
-.project__plus--hidden {
-    opacity: 0;
-    transform: rotate(360deg);
-    transition: all .8s ease;
-}
-
-.project__minus {
-    position: absolute;
-    top: .3rem;
-    right: 0;
-    width: 3.5rem;
-    height: 3.5rem;
-
-    opacity: 0;
-    transition: all .3s ease;
-}
-
-.project__minus--show {
-    opacity: 1;
 }
 
 .project__portfolio--btn {

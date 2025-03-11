@@ -13,6 +13,48 @@
     transition: all 1s ease;
 }
 
+.accordion__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+    padding: .5rem;
+    fill: var(--colour-white);
+}
+
+.accordion__plus {
+    position: absolute;
+    top: .3rem;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.accordion__plus--hidden {
+    opacity: 0;
+    transform: rotate(360deg);
+    transition: all .5s ease;
+}
+
+.accordion__minus {
+    position: absolute;
+    top: .3rem;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.accordion__minus--show {
+    opacity: 1;
+}
+
 .accordion--line {
     visibility: hidden;
     border-color: var(--colour-white);

@@ -1,7 +1,8 @@
 :root {
     
-    --colour-primary: #333a56;
-    --colour-primary-dark: rgba(51, 58, 87, 0.373);
+    --colour-primary: rgb(51, 58, 86);
+    --colour-primary-opacity-top: rgba(51, 58, 86, .8);
+    --colour-primary-opacity-bottom: rgba(51, 58, 86, .9);
 
     --colour-secondary: #52658F;
     --colour-secondary-dark: #44577E;
