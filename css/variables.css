@@ -1,7 +1,7 @@
 :root {
     
     --colour-primary: rgb(51, 58, 86);
-    --colour-primary-opacity-top: rgba(51, 58, 86, .8);
+    --colour-primary-opacity-top: rgba(51, 58, 86, .95);
     --colour-primary-opacity-bottom: rgba(51, 58, 86, .9);
 
     --colour-secondary: #52658F;
