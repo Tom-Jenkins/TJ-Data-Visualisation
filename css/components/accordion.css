@@ -6,7 +6,7 @@
 }
 
 .accordion--open {
-    max-height: 30rem;
+    max-height: 40rem;
     background-color: inherit;
     border-radius: inherit;
 

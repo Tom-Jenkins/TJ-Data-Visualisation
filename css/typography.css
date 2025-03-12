@@ -25,6 +25,7 @@ h3 {
     font-size: 3.5rem;
     font-weight: 400;
     letter-spacing: 0.35rem;
+    line-height: 1.6 !important;
     /* padding: 2rem 0; */
 }
 
