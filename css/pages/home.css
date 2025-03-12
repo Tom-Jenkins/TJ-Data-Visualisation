@@ -197,7 +197,7 @@
 
 @media (max-width: 768px) {
     .project__paragraph {
-        width: 95%;
+        width: 100%;
     }
 }
 
