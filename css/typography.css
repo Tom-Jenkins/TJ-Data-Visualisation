@@ -17,6 +17,10 @@ h2 {
     padding: 2rem 0;
 }
 
+.h2-letter-spacing {
+    letter-spacing: .5rem;
+}
+
 h3 {
     font-size: 3.5rem;
     font-weight: 400;
@@ -26,11 +30,13 @@ h3 {
 
 ul {
     list-style-type: disc;
-    padding-left: 0;
+    list-style-position: outside;
+    margin-left: 5rem;
+    text-align: left;
 }
 
 li {
     margin-bottom: .8rem;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 2rem;
 }

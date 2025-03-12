@@ -182,13 +182,12 @@
         <section class="project" id="project">
 
             <div class="project__title">
-                <h2>Featured Project <div class="line"></div></h2>
+                <h2 class="h2-letter-spacing">Featured Project <div class="line"></div></h2>
             </div>
-
-            <div class="project__subtitle">
-                <h3>Build interactive web apps for University of East Anglia: <a href="https://www.uea.ac.uk/climate" target="_blank">ClimateUEA</a></h3>
-                <p>Click on the boxes below to read more about each step of the process.</p>
-            </div>
+                
+            <p class="project__paragraph">
+                I developed four interactive web applications for <a href="https://www.uea.ac.uk/climate" target="_blank">ClimateUEA</a> (University of East Anglia). The first two apps were designed to showcase their <strong>State of Wildfires</strong> data published in <a href="https://doi.org/10.5194/essd-16-3601-2024" target="_blank">2024</a>, which will be updated annually. The other two apps were built to visualise the <strong>National Contributions to Global Warming</strong> data published in <a href="https://doi.org/10.1038/s41597-023-02041-1" target="_blank">2023</a> &mdash; both display the percentage change in global mean surface temperature across different time periods for each country. Open the tabs below to reveal more information about this project. Links to the apps hosted on the ClimateUEA website can also be found below.
+            </p>            
 
             <div class="row project__box--container">
 
@@ -209,7 +208,10 @@
 
                     <div class="accordion" id="accordion--objectives">
                         <br><hr class="accordion--line">
-                        <p>Built interactive web applications that allow users to explore geospatial and time series climate data</p>
+                        <ul class="accordion__points">
+                            <li>Preprocess geospatial data and convert into JSON and GeoJSON format</li>
+                            <li>Build self-contained web applications using JavaScript that can be deployed on the ClimateUEA website</li>
+                        </ul>
                     </div> 
                 </div>
 
@@ -229,7 +231,10 @@
                     
                     <div class="accordion" id="accordion--processing">
                         <br><hr class="accordion--line">
-                        <p>Preprocessing of data in R / Python and preparation of GeoJSON and JSON files.</p>
+                        <ul class="accordion__points">
+                            <li>Developed R scripts to automate the processing and conversion of geospatial data in CSV format to JSON or GeoJSON files</li>
+                            <li>Calculated new statistics from the data, such as percentage change in temperature for each country across different time periods (e.g. 1851 to 2022)</li>
+                        </ul>
                     </div> 
                 </div>
 
@@ -250,7 +255,11 @@
                     
                     <div class="accordion" id="accordion--development">
                         <br><hr class="accordion--line">
-                        <p>Agile development to ensure end products are fit for purpose. Preprocessing of data in R / Python and preparation of GeoJSON and JSON files.</p>
+                        <ul class="accordion__points">
+                            <li>Collaborated closely with the team to creating working solutions quickly</li>
+                            <li>Continuously refined app user-interface and features based on feedback</li>
+                            <li>Adapted to bespoke requests, such as adding information popups and options for users to download map images and data</li>
+                        </ul>
                     </div> 
                 </div>
 
@@ -271,30 +280,17 @@
 
                     <div class="accordion" id="accordion--deployment">
                         <br><hr class="accordion--line">
-                        <p>NPM project deployed via AWS Amplify and embedded into ClimateUEA website.</p>
+                        <ul class="accordion__points">
+                            <li>Worked with UEA IT team to deploy each app with AWS Amplify</li>
+                            <li>Set up continuous integration and version control via Bitbucket to allow rapid updates to applications</li>
+                            <li>Apps in production were embedded into the ClimateUEA web pages using iFrames</li>
+                        </ul>
                     </div> 
                 </div>
 
             </div>
 
-            <div class="project__subtitle">
-                <h3>Example Outputs:</h3>
-            </div>
-
             <div class="row">
-
-                <div class="card">
-                    <div class="card__title">National Contributions to Global Warming</div>
-                    <div class="card__content">
-                        <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                        </svg>
-                        <a href="https://www.uea.ac.uk/climate/climate-data/attribution-of-global-warming" target="_blank">
-                            <img class="card__image" src="images/UEA_map_national_contributions.png" alt="screenshot of UEA global warming map app">
-                        </a>
-                    </div>
-                </div>
 
                 <div class="card">
                     <div class="card__title">State of Wildfires</div>
@@ -305,6 +301,19 @@
                         </svg>
                         <a href="https://www.uea.ac.uk/climate/climate-data/state-of-wildfires" target="_blank">
                             <img class="card__image" src="images/UEA_timeseries_wildfires.png" alt="screenshot of UEA wildfire time series app">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">National Contributions to Global Warming</div>
+                    <div class="card__content">
+                        <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                        </svg>
+                        <a href="https://www.uea.ac.uk/climate/climate-data/attribution-of-global-warming" target="_blank">
+                            <img class="card__image" src="images/UEA_map_national_contributions.png" alt="screenshot of UEA global warming map app">
                         </a>
                     </div>
                 </div>
@@ -320,8 +329,11 @@
 
         <section class="testimonials" id="testimonials">
 
-            <div>
+            <div class="testimonials__title">
                 <h2>Testimonials <div class="line"></div></h2>
+            </div>
+
+            <div>
                 <p>bringing data to life and building open-source tools &mdash; hear from clients and users</p>
             </div>
 
@@ -347,37 +359,44 @@
         <section class="contact" id="contact">
 
             <div>
-                <h2>Contact <div class="line"></div></h2>
+                <h2 class="h2-letter-spacing">Contact <div class="line"></div></h2>
             </div>
 
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
-                </svg>
-                tom.l.jenkins@outlook.com
-            </div>
-            
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                </svg>
-                Tom__Jenkins
-            </div>
-
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                </svg>
-                XXX
-            </div>
-
-            <div>
-                Google Scholar
-            </div>
-
-            <div>
-
-            </div>
+            <div class="contact__list"> 
+                <p>
+                    Looking to create compelling data visualisations? Get in touch via email to discuss your project.
+                </p>
+                <br>
+    
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                        </svg>
+                        <a href="mailto:tom.l.jenkins@outlook.com">tom.l.jenkins@outlook.com</a>
+                    </li>
+    
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                        </svg>
+                        <a href="https://github.com/Tom-Jenkins" target="_blank">tom__jenkins</a>
+                    </li>
+                    
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        </svg>
+                        <a href="https://www.linkedin.com/in/tom-l-jenkins/" target="_blank">LinkedIn</a>
+                    </li>
+                    
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  width="16" height="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg>
+                        <a href="https://scholar.google.co.uk/citations?user=k7oAuGgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    </li>
+                </ul>
+            </div>    
+            <br>    
                 
             <div id="map"></div>
             

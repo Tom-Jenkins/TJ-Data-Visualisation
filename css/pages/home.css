@@ -101,7 +101,6 @@
 
 .services {
     background-color: var(--colour-primary);
-    /* background-image: linear-gradient(to bottom, var(--colour-primary), var(--colour-secondary)); */
 }
 
 .services__title {
@@ -181,21 +180,24 @@
 }
 
 .project__title {
-    /* padding: 2rem 0; */
     color: var(--colour-black);
+    /* padding-bottom: 1.5rem; */
 }
 
-.project__subtitle {
-    padding-bottom: 3rem;
-    color: var(--colour-black);
+.project__paragraph {
+    margin-bottom: 5rem;
+    width: 75%;
+    justify-self: anchor-center;
 
-    & > h3 > a {
+    & > a {
         text-decoration: none;
-        color: inherit;
+        color: var(--colour-secondary);
+    }
+}
 
-        &:hover {
-            color: var(--colour-secondary);
-        }
+@media (max-width: 768px) {
+    .project__paragraph {
+        width: 95%;
     }
 }
 
@@ -203,14 +205,14 @@
     /* Required to ensure accordions open and close independently */
     align-items: self-start;
 
-    margin-bottom: 4.5rem;
+    margin-bottom: 7rem;
 }
 
 .project__box {
     width: 50rem;
     height: auto;
     background-color: var(--colour-secondary-dark);
-    color: var(--colour-grey-blue);
+    color: var(--colour-white);
     box-shadow: 0 .5px 10px 0 var(--colour-primary);
     border-radius: 10px;
     /* top right bottom left */
@@ -234,14 +236,58 @@
 
 
 .testimonials {
-    background-color: var(--colour-white);
+    background-color: var(--colour-primary);
+    color: var(--colour-grey-blue);
+}
+
+.testimonials__title {
+    color: var(--colour-grey-blue);
+    padding-bottom: 1.5rem;
+
+    & > h2 > .line,
+    .line::before,
+    .line::after {
+        background-color: var(--colour-grey-blue);
+    }
 }
 
 
 .contact {
     background-color: var(--colour-grey-blue);
+    color: var(--colour-black);
     padding-bottom: 0;
 }
+
+.contact__list {
+    justify-self: anchor-center;
+
+    & > ul {
+        list-style-type: none;
+        justify-self: inherit;
+        cursor: default;
+
+        & > li > svg {
+            fill: var(--colour-secondary);
+            margin-bottom: -.1rem;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        & > li > a {
+            margin-left: 1rem;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--colour-secondary)
+            }
+        }
+    }
+}
+
 
 #map {
     width: 95%;
