@@ -17,6 +17,12 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // Add marker
 const marker = L.marker(coords).addTo(map);
 
+// Adding event listener to zoom in when marker is clicked
+marker.on("click", function() {
+  map.setZoom(11);
+  map.panTo(marker.getLatLng());  // centre map on the marker
+});
+
 // Add a custom reset control button to the top-left corner of the map
 const resetView = L.Control.extend({
     options: {
@@ -51,7 +57,6 @@ document.getElementById("btn-reset-view").addEventListener("click", () => {
 L.control.scale({imperial: false}).addTo(map);
 
 
-
 // ---------- //
 // PROJECT ACCORDION
 // ---------- //
@@ -73,3 +78,56 @@ accordionLinks.forEach(link => {
         minusIcon.classList.toggle("accordion__minus--show");
     });
 });
+
+
+// ---------- //
+// TESTIMONIALS CAROUSEL
+// ---------- //
+
+// Get elements from DOM
+const carouselContainer = document.querySelector(".carousel__container");
+const carousel = document.querySelector(".carousel");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+// Declare variables
+let currentTranslate = 0; // Track current position of carousel translateX
+const itemWidth = 40; // Width of each carousel item in rem
+const gap = 5; // Gap between item in rem
+const translateAmount = itemWidth + gap; // Total width to translate
+
+// Function to clone a carousel item and append it to the end of the carousel
+// const cloneItemEnd = function (node) {
+//   const clone = node.cloneNode(true);
+//   carousel.appendChild(clone);
+//   node.remove();
+// };
+
+// Function to clone a carousel item and append it to the start of the carousel
+// const cloneItemStart = function (node, firstChild) {
+//   const clone = node.cloneNode(true);
+//   carousel.insertBefore(clone, firstChild);
+//   node.remove();
+// };
+
+// Function to move the carousel one item to the right
+const moveCarouselRight = function () {
+  if (currentTranslate > -90) {
+    currentTranslate -= translateAmount;
+    carousel.style.transform = `translateX(${currentTranslate}rem)`;
+  };
+  console.log(currentTranslate);
+};
+
+// Function to move the carousel one item to the left
+const moveCarouselLeft = function () {
+  if (currentTranslate < 90) {
+    currentTranslate += translateAmount;
+    carousel.style.transform = `translateX(${currentTranslate}rem)`;
+  };
+  console.log(currentTranslate);
+};
+
+// Add event listener to NEXT carousel button
+nextBtn.addEventListener("click", moveCarouselRight);
+prevBtn.addEventListener("click", moveCarouselLeft);

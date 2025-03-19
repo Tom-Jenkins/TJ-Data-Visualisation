@@ -1,0 +1,46 @@
+.carousel__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 5rem;
+    height: 65%;
+    transition: transform .5s ease-in-out;
+}
+
+.carousel__item {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    background-color: var(--colour-secondary-dark);
+    /* justify-self: center; */
+
+    display: flex;
+    flex: 0 0 auto; /* Prevents shrinking, maintains item width */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & > p {
+        text-align: inherit;
+    }
+}
+
+.carousel__title {
+    font-size: 3rem;
+    font-variant: small-caps;
+    font-weight: bold;
+    letter-spacing: .2rem;
+}
+
+.carousel__btn {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}

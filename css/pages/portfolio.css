@@ -3,7 +3,7 @@
 }
 
 .portfolio__title {
-
+    padding-top: 2rem;
     & > p {
         padding: 0;
         text-align: center;

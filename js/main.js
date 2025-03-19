@@ -34,18 +34,6 @@ function updateScaleFactor() {
 }
 
 
-// On window load
-window.addEventListener("load", () => {
-    // Update the scale factor
-    updateScaleFactor();
-
-});
-
-
-// On window resize
-window.addEventListener("resize", updateScaleFactor);
-
-
 // Event listener to remove overflow scroll bar from body when navigation icon clicked
 const navCheckbox = document.querySelector(".nav__mobile--checkbox");
 navCheckbox.addEventListener("change", () => {
@@ -79,4 +67,17 @@ document.querySelectorAll(".nav__mobile--link").forEach(link => {
         };
         
     });
+});
+
+
+// ---------- //
+// ON WINDOW LOAD AND RESIZE
+// ---------- //
+
+window.addEventListener("load", () => {
+    updateScaleFactor(); // Update the scale factor
+});
+
+window.addEventListener("resize", () => {
+    updateScaleFactor();
 });
