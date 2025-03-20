@@ -165,17 +165,17 @@ let startX;
 let endX;
 
 // Touch event handlers
-carousel.addEventListener("touchstart", (e) => {
+carouselContainer.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
   // console.log(startX);
 });
 
-carousel.addEventListener("touchmove", (e) => {
+carouselContainer.addEventListener("touchmove", (e) => {
   e.preventDefault();
   endX = e.touches[0].clientX;
 }, { passive: false });
 
-carousel.addEventListener("touchend", () => {
+carouselContainer.addEventListener("touchend", () => {
   // console.log(endX);
   const diffX = startX - endX;
   // console.log(diffX);
