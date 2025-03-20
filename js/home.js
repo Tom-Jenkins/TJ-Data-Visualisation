@@ -120,8 +120,9 @@ const moveCarouselRight = function () {
     currentTranslate -= translateAmount;
     carousel.style.transform = `translateX(${currentTranslate}rem)`;
     currentIndex += 1;
-    // Move carousel back to beginning
-  } else {
+  } 
+  // Move carousel back to beginning
+  else {
     currentTranslate = translateMax;
     carousel.style.transform = `translateX(${currentTranslate}rem)`;
     currentIndex = 0;
@@ -134,8 +135,9 @@ const moveCarouselLeft = function () {
     currentTranslate += translateAmount;
     carousel.style.transform = `translateX(${currentTranslate}rem)`;
     currentIndex -= 1;
-    // Move carousel to end
-  } else {
+  }
+  // Move carousel to end 
+  else {
     currentTranslate = translateMin;
     carousel.style.transform = `translateX(${currentTranslate}rem)`;
     currentIndex = items.length-1;
@@ -164,26 +166,23 @@ let endX = 0;
 
 // Touch event handlers
 carousel.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
+  startX = e.touches[0].clientX;
 });
 
 carousel.addEventListener("touchmove", (e) => {
-    endX = e.touches[0].clientX;
+  e.preventDefault();
+  endX = e.touches[0].clientX;
 });
 
-// carousel.addEventListener("touchmove", (e) => {
-//   e.preventDefault();
-// }, { passive: false });
-
 carousel.addEventListener("touchend", () => {
-    const diff = startX - endX;
+  const diff = startX - endX;
 
-    // Swipe left (next)
-    if (diff > 50) {
-        moveCarouselRight();
-    }
-    // Swipe right (prev)
-    else if (diff < -50) {
-        moveCarouselLeft();
-    }
+  // Swipe left (next)
+  if (diff > 50) {
+      moveCarouselRight();
+  }
+  // Swipe right (prev)
+  else if (diff < -50) {
+      moveCarouselLeft();
+  };
 });
