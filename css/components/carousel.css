@@ -14,20 +14,35 @@
 }
 
 .carousel__item {
-    width: 40rem;
-    height: 40rem;
+    width: 35rem;
+    height: 35rem;
     border-radius: 50%;
     background-color: var(--colour-secondary-dark);
-    /* justify-self: center; */
 
     display: flex;
     flex: 0 0 auto; /* Prevents shrinking, maintains item width */
     align-items: center;
-    justify-content: center;
     text-align: center;
+    justify-content: center;
+
+    padding: 2rem;
+    clip-path: circle(50% at center); /* Ensure text within circle */
 
     & > p {
         text-align: inherit;
+        font-size: 1.9rem;
+
+        & > span {
+            display: block;
+            max-width: 95%;
+            justify-self: center;
+
+            & > a {
+                text-decoration: none;
+                color: inherit;
+                &:hover {color: var(--colour-tertiary);}
+            }
+        }
     }
 }
 
@@ -43,4 +58,8 @@
     justify-content: center;
     gap: 2rem;
     margin-top: 4rem;
+    
+    & > .btn {
+        font-size: 1.3rem;
+    }
 }

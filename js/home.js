@@ -89,12 +89,16 @@ const carouselContainer = document.querySelector(".carousel__container");
 const carousel = document.querySelector(".carousel");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+const items = document.querySelectorAll(".carousel__item");
 
 // Declare variables
+let currentIndex = 3 // Middle item of carousel
 let currentTranslate = 0; // Track current position of carousel translateX
-const itemWidth = 40; // Width of each carousel item in rem
+const itemWidth = 35; // Width of each carousel item in rem
 const gap = 5; // Gap between item in rem
 const translateAmount = itemWidth + gap; // Total width to translate
+const translateMin = -(translateAmount * currentIndex); // Translate representing first item
+const translateMax = (translateAmount * currentIndex); // Translate representing last item
 
 // Function to clone a carousel item and append it to the end of the carousel
 // const cloneItemEnd = function (node) {
@@ -112,22 +116,74 @@ const translateAmount = itemWidth + gap; // Total width to translate
 
 // Function to move the carousel one item to the right
 const moveCarouselRight = function () {
-  if (currentTranslate > -90) {
+  if (currentIndex < items.length-1) {
     currentTranslate -= translateAmount;
     carousel.style.transform = `translateX(${currentTranslate}rem)`;
+    currentIndex += 1;
+    // Move carousel back to beginning
+  } else {
+    currentTranslate = translateMax;
+    carousel.style.transform = `translateX(${currentTranslate}rem)`;
+    currentIndex = 0;
   };
-  console.log(currentTranslate);
 };
 
 // Function to move the carousel one item to the left
 const moveCarouselLeft = function () {
-  if (currentTranslate < 90) {
+  if (currentIndex > 0) {
     currentTranslate += translateAmount;
     carousel.style.transform = `translateX(${currentTranslate}rem)`;
+    currentIndex -= 1;
+    // Move carousel to end
+  } else {
+    currentTranslate = translateMin;
+    carousel.style.transform = `translateX(${currentTranslate}rem)`;
+    currentIndex = items.length-1;
   };
-  console.log(currentTranslate);
 };
 
-// Add event listener to NEXT carousel button
+// Button click support
 nextBtn.addEventListener("click", moveCarouselRight);
 prevBtn.addEventListener("click", moveCarouselLeft);
+
+// Keyboard arrow right and left support
+document.addEventListener("keydown", (e) => {
+  e.preventDefault();
+  if (document.activeElement === document.body) {
+    if (e.key === "ArrowRight") {
+      moveCarouselRight();
+    } else if (e.key === "ArrowLeft") {
+      moveCarouselLeft();
+    };
+  };
+});
+
+// Variables for touch events
+let startX = 0;
+let endX = 0;
+
+// Touch event handlers
+carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+});
+
+// carousel.addEventListener("touchmove", (e) => {
+//   e.preventDefault();
+// }, { passive: false });
+
+carousel.addEventListener("touchend", () => {
+    const diff = startX - endX;
+
+    // Swipe left (next)
+    if (diff > 50) {
+        moveCarouselRight();
+    }
+    // Swipe right (prev)
+    else if (diff < -50) {
+        moveCarouselLeft();
+    }
+});

@@ -40,3 +40,7 @@ h3 {
         font-size: 2rem;
     }
 }
+
+.small-caps {
+    font-variant: small-caps;
+}

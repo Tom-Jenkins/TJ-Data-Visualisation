@@ -33,8 +33,6 @@
     border-radius: 5px;
 
     &:hover {
-        /* background-color: var(--colour-secondary);
-        color: var(--colour-white); */
         background-color: var(--colour-tertiary);
         color: var(--colour-black);
     }
