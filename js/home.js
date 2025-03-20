@@ -166,6 +166,7 @@ let endX = 0;
 
 // Touch event handlers
 carousel.addEventListener("touchstart", (e) => {
+  e.preventDefault();
   startX = e.touches[0].clientX;
 });
 
@@ -175,14 +176,15 @@ carousel.addEventListener("touchmove", (e) => {
 });
 
 carousel.addEventListener("touchend", () => {
+  e.preventDefault();
   const diff = startX - endX;
 
   // Swipe left (next)
-  if (diff > 50) {
+  if (diff > 30) {
       moveCarouselRight();
   }
   // Swipe right (prev)
-  else if (diff < -50) {
+  else if (diff < -30) {
       moveCarouselLeft();
   };
 });
