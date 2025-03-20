@@ -166,17 +166,17 @@ let endX = 0;
 
 // Touch event handlers
 carousel.addEventListener("touchstart", (e) => {
-  e.preventDefault();
   startX = e.touches[0].clientX;
 });
 
 carousel.addEventListener("touchmove", (e) => {
-  e.preventDefault();
   endX = e.touches[0].clientX;
-});
 
-carousel.addEventListener("touchend", (e) => {
+  // Prevent default scrolling behaviour while swiping
   e.preventDefault();
+}, { passive: false });
+
+carousel.addEventListener("touchend", () => {
   const diff = startX - endX;
 
   // Swipe left (next)
@@ -187,4 +187,8 @@ carousel.addEventListener("touchend", (e) => {
   else if (diff < -30) {
       moveCarouselLeft();
   };
+
+  // Reset variables to ensure a new swipe can be detected
+  startX = 0;
+  endX = 0;
 });
