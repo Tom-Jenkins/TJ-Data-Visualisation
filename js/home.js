@@ -160,43 +160,53 @@ document.addEventListener("keydown", (e) => {
   };
 });
 
-// Variables for touch events
-let startX = 0;
-let endX = 0;
-let isSwiping = false; // Track if a swipe is in progress
+// Declare variables for touch events
+let startX;
+let endX;
 
 // Touch event handlers
 carousel.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-    endX = startX; // Ensure endX is initialized
-    isSwiping = true; // Flag swiping state
+  startX = e.touches[0].clientX;
+  // console.log(startX);
 });
 
 carousel.addEventListener("touchmove", (e) => {
-    if (!isSwiping) return; // Ignore unexpected touchmoves
-
-    endX = e.touches[0].clientX;
-    
-    // Prevent the default touch behavior (important for iOS)
-    e.preventDefault();
+  e.preventDefault();
+  endX = e.touches[0].clientX;
 }, { passive: false });
 
 carousel.addEventListener("touchend", () => {
-    if (!isSwiping) return;
+  // console.log(endX);
+  const diffX = startX - endX;
+  // console.log(diffX);
 
-    const diff = startX - endX;
+  // Swipe left (next)
+  if (diffX > 50) {
+      moveCarouselRight();
+  }
+  // Swipe right (prev)
+  else if (diffX < -50) {
+      moveCarouselLeft();
+  };
 
-    // Swipe left (next)
-    if (diff > 50) {
-        moveCarouselRight();
-    }
-    // Swipe right (prev)
-    else if (diff < -50) {
-        moveCarouselLeft();
-    }
-
-    // Reset variables to ensure the next swipe works properly
-    startX = 0;
-    endX = 0;
-    isSwiping = false;
+  // Reset variables to ensure a new swipe can be detected
+  startX = 0;
+  endX = 0;
 });
+
+// carousel.addEventListener("touchcancel", () => {
+//   const diff = startX - endX;
+
+//   // Swipe left (next)
+//   if (diff > 50) {
+//       moveCarouselRight();
+//   }
+//   // Swipe right (prev)
+//   else if (diff < -50) {
+//       moveCarouselLeft();
+//   };
+
+//   // Reset variables to ensure a new swipe can be detected
+//   startX = 0;
+//   endX = 0;
+// });
