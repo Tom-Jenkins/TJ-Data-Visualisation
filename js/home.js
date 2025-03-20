@@ -175,7 +175,7 @@ carousel.addEventListener("touchmove", (e) => {
   endX = e.touches[0].clientX;
 });
 
-carousel.addEventListener("touchend", () => {
+carousel.addEventListener("touchend", (e) => {
   e.preventDefault();
   const diff = startX - endX;
 
