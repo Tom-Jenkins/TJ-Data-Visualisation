@@ -30,6 +30,16 @@
     padding-bottom: 3rem;
 }
 
+@media (max-width: 768px) {
+    .portfolio__title {
+        padding-top: 1rem;
+    }
+    .portfolio__item--container {
+        padding-top: 1rem;
+        gap: 3rem;
+    }
+}
+
 .portfolio__item--hide {
     display: none;
 }
