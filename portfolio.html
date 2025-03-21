@@ -134,7 +134,7 @@
                         <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                             <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
                         </svg>
-                        <a href="#" class="popup__trigger" data-target="AssemblyStatsViewer--popup">
+                        <a href="#" class="popup__trigger" data-target="UEAWildfireChart">
                             <img class="card__image" src="images/AssemblyStatsViewer.PNG" alt="screenshot of Assembly Stats Viewer app">
                         </a>
                     </div>
@@ -205,33 +205,16 @@
         </section>
 
         <!-- Popups -->
-        <div class="popup" id="AssemblyStatsViewer--popup">
-            <div class="popup__content">
-                <a href="#" class="popup__close">&times;</a>
-                <!-- content -->
-                <div>
-                    <h3>Assembly Stats Viewer App</h3>
-                    <div>
-                        <a href="https://assemblystatsviewer.netlify.app/" target="_blank"><button type="button" class="btn__dark">Go To App</button></a>
-                    </div>
-                    <hr>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <div>
-                        <a href="#" class="popup__close--btn"><button type="button" class="btn__dark">Close</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+        <!-- Earthquake Dashboard -->
         <div class="popup" id="UEAWildfireChart">
-            <div class="popup__content">
+            <div class="popup__container">
                 <a href="#" class="popup__close">&times;</a>
-                <div>
-                    <h3>Wildfire Chart Popup Content</h3>
-                    <div>
-                        <a href="https://assemblystatsviewer.netlify.app/" target="_blank"><button type="button" class="btn__dark">Go To App</button></a>
+
+                <div class="popup__content">
+                    <h3> Real-Time Earthquake Dashboard</h3>
+                    <div class="popup__gotoapp">
+                        <a href="https://earthquake-dashboard.netlify.app/" target="_blank"><button type="button" class="btn__dark">Go To App</button></a>
                     </div>
                     <hr>
                     <p>
@@ -241,6 +224,7 @@
                         <a href="#" class="popup__close--btn"><button type="button" class="btn__dark">Close</button></a>
                     </div>
                 </div>
+
             </div>
         </div>
     

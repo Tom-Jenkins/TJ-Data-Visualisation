@@ -111,7 +111,7 @@
         z-index: 2000;
         border-radius: 3px;
         
-        background-color: white;
+        background-color: var(--colour-grey-blue);
         cursor: pointer;
         /* box-shadow: 0 0 2rem var(--colour-black); */
         /* text-align: center; */

@@ -28,12 +28,12 @@
     visibility: visible;
 }
 
-.popup--active .popup__content {
+.popup--active .popup__container {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup__content {
+.popup__container {
     /* absolute center */
     position: absolute;
     top: 50%;
@@ -45,24 +45,34 @@
     width: 70%;
     height: 85%;
     overflow-y: scroll;
-    background-color: var(--colour-white);
+    background-color: var(--colour-grey-blue);
     box-shadow: 0 2rem 4rem rgba(44, 44, 44, .2);
 
     font-size: 5rem;
     text-align: center;
     align-content: start;
+}
 
-    & > div {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 0 5rem;
-    }
+.popup__content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 5rem;
+}
+
+.popup__gotoapp {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.popup__content p {
+    margin-top: 2rem;
+    padding: 0;
 }
 
 /* Laptop/Desktop Screen Styles */
 @media (max-width: 768px) {
 
-    .popup__content {
+    .popup__container {
         width: 95%;
         height: 70vh;
         margin-top: -4rem;
@@ -76,12 +86,12 @@
 .popup__close {
     color: var(--colour-primary);
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 1rem;
+    right: 1rem;
     font-size: 5rem;
     text-decoration: none;
     display: inline-block;
-    line-height: 1;
+    line-height: 3rem;
 
     &:hover {
         color: var(--colour-secondary);
