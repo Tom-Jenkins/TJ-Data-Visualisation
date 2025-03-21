@@ -184,10 +184,17 @@
     /* padding-bottom: 1.5rem; */
 }
 
+.project__paragraph--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .project__paragraph {
     margin-bottom: 5rem;
-    width: 75%;
-    justify-self: anchor-center;
+    /* Max width using X characters */
+    max-width: 90ch;
+    text-align: left;
 
     & > a {
         text-decoration: none;
@@ -204,12 +211,16 @@
 .project__box--container {
     /* Required to ensure accordions open and close independently */
     align-items: self-start;
-
+    
     margin-bottom: 7rem;
+    max-width: 90%;  /* Ensures it doesn't take up the full width */
+    width: 1200px;   /* Set a reasonable max width */
+    margin-left: auto; /* Centers it horizontally */
+    margin-right: auto; /* Centers it horizontally */
 }
 
 .project__box {
-    width: 50rem;
+    width: 45rem;
     height: auto;
     background-color: var(--colour-secondary-dark);
     color: var(--colour-white);
@@ -227,6 +238,16 @@
         & > span {
             margin-left: 5rem;
         }
+    }
+}
+
+.project__card--container {
+    gap: 10rem;
+}
+
+@media (max-width: 768px) {
+    .project__card--container {
+        gap: 4rem;
     }
 }
 
@@ -270,29 +291,34 @@
     padding-bottom: 0;
 }
 
+.contact__text {
+    text-align: center;
+}
+
 .contact__list {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & > ul {
         list-style-type: none;
-        justify-self: inherit;
         cursor: default;
 
         & > li > svg {
             fill: var(--colour-secondary);
             margin-bottom: -.1rem;
-
+    
             &:hover {
                 transform: scale(1.2);
             }
         }
-
+    
         & > li > a {
             margin-left: 1rem;
             text-decoration: none;
             color: inherit;
             cursor: pointer;
-
+    
             &:hover {
                 color: var(--colour-secondary)
             }
