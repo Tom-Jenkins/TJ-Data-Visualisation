@@ -55,7 +55,7 @@
 }
 
 .carousel__btn {
-    transform: scale(0.95);
+    transform: scale(0.80);
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -64,10 +64,12 @@
     & > .btn {
         width: 6.5rem;
         height: 5rem;
+
         & > svg {
             width: 3.5rem;
             height: 3.5rem;
             margin-top: -.2rem;
+            color: var(--colour-black);
         }
     }
 }
