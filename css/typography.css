@@ -31,7 +31,6 @@ h3 {
 .ul-list {
     list-style-type: disc;
     list-style-position: outside;
-    margin-left: 5rem;
     text-align: left;
 
     & > li {

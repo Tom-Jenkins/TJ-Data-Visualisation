@@ -59,7 +59,7 @@
 .accordion--line {
     visibility: hidden;
     /* top right bottom left */
-    margin: .5rem 2.5rem 1rem 2.5rem;
+    margin: .5rem 2rem 1rem 1rem;
     border: .1rem solid var(--colour-white);
 }
 
@@ -69,6 +69,6 @@
 
 .accordion__points {
     /* top right bottom left */
-    margin: 2rem 3rem 0 3rem;
+    margin: 2rem 1rem 0 1rem;
     padding-left: 2rem;
 }

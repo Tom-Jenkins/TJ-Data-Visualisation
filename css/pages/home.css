@@ -231,12 +231,16 @@
 
     & > h3 {
         text-align: start;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         position: relative;
         cursor: pointer;
 
         & > span {
             margin-left: 5rem;
+        }
+
+        & > svg {
+            margin-top: -.2rem;
         }
     }
 }
@@ -292,7 +296,14 @@
 }
 
 .contact__text {
-    text-align: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contact__text {
+        max-width: 30ch;
+    }
 }
 
 .contact__list {
