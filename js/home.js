@@ -91,11 +91,13 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const items = document.querySelectorAll(".carousel__item");
 
+// Get CSS variable property value
+const gap = Number(window.getComputedStyle(document.documentElement).getPropertyValue("--carousel-gap").replace("rem", ""));
+
 // Declare variables
 let currentIndex = 3 // Middle item of carousel
 let currentTranslate = 0; // Track current position of carousel translateX
 const itemWidth = 35; // Width of each carousel item in rem
-const gap = 5; // Gap between item in rem
 const translateAmount = itemWidth + gap; // Total width to translate
 const translateMin = -(translateAmount * currentIndex); // Translate representing first item
 const translateMax = (translateAmount * currentIndex); // Translate representing last item

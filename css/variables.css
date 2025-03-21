@@ -1,6 +1,6 @@
 :root {
     
-    --colour-primary: rgb(51, 58, 86);
+    --colour-primary: #333a56;
     --colour-primary-opacity-top: rgba(51, 58, 86, .8);
     --colour-primary-opacity-bottom: rgba(51, 58, 86, .8);
 
@@ -26,6 +26,7 @@
     --section-padding-horizontal: 2rem;
     
     --navbar-height: 55px;
+    --carousel-gap: 2rem;
     
     /* Bootstrap breakpoints */
     /* 

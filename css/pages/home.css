@@ -237,9 +237,12 @@
 
 
 .testimonials {
+    position: relative;
     background-color: var(--colour-primary);
     color: var(--colour-grey-blue);
     /* height: 80vh; */
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .testimonials__title {
@@ -254,7 +257,7 @@
 
     & > p {
         text-align: center;
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
     }
 }
 

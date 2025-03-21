@@ -2,14 +2,15 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    box-shadow: 0 .5px 10px 0 var(--colour-grey-blue);
 }
 
 .carousel {
+    padding: 2rem 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 5rem;
-    height: 65%;
+    gap: var(--carousel-gap);
     transition: transform .5s ease-in-out;
 }
 
@@ -54,12 +55,21 @@
 }
 
 .carousel__btn {
+    transform: scale(0.95);
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-top: 4rem;
     
     & > .btn {
-        font-size: 1.3rem;
+        width: 6.5rem;
+        height: 5rem;
+        & > svg {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-top: -.2rem;
+        }
     }
 }
+
+#prevBtn { transform: rotate(180deg) }
