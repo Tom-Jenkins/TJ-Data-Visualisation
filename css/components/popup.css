@@ -38,9 +38,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
-    opacity: 0;
     transform: translate(-50%, -50%) scale(.2);
+    opacity: 0;
     transition: all .4s .1s;
 
     width: 70%;
@@ -60,6 +59,20 @@
     }
 }
 
+/* Laptop/Desktop Screen Styles */
+@media (max-width: 768px) {
+
+    .popup__content {
+        width: 95%;
+        height: 70vh;
+        margin-top: -4rem;
+
+        & > div {
+            padding: 0 1rem;
+        }
+    }
+}
+
 .popup__close {
     color: var(--colour-primary);
     position: absolute;
@@ -76,14 +89,5 @@
 
     &:active {
         transform: scale(.9);
-    }
-}
-
-/* Laptop/Desktop Screen Styles */
-@media (max-width: 768px) {
-
-    .popup__content {
-        width: 90%;
-        height: min(90dvh, 90vh);
     }
 }

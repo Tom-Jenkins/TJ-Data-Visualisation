@@ -3,12 +3,10 @@
 }
 
 .portfolio__title {
-    padding-top: 2rem;
+    padding-top: var(--section-padding-vertical);
     & > p {
-        padding: 0;
+        padding: 2rem 0 1rem 0;
         text-align: center;
-        /* text-transform: lowercase; */
-        /* font-style: italic; */
     }
 }
 
