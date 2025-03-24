@@ -54,7 +54,7 @@
 }
 
 .popup__content {
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 30px;
     padding: 0 5rem;
 }
@@ -74,8 +74,8 @@
 
     .popup__container {
         width: 95%;
-        height: 70vh;
-        margin-top: -4rem;
+        height: 80vh;
+        margin-top: -2rem;
 
         & > div {
             padding: 0 1rem;

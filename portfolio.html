@@ -83,8 +83,8 @@
                         <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                             <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
                         </svg>
-                        <a href="#" class="popup__trigger" data-target="UEAWildfireChart">
-                            <img class="card__image" src="images/earthquake-dashboard.PNG" alt="screenshot of real-time earthquake dashboard">
+                        <a href="#" class="popup__trigger" data-target="popup--earthquaked-dashboard">
+                            <img class="card__image" src="images/earthquake-dashboard.png" alt="screenshot of real-time earthquake dashboard">
                         </a>
                     </div>
                 </div>
@@ -207,7 +207,7 @@
         <!-- Popups -->
 
         <!-- Earthquake Dashboard -->
-        <div class="popup" id="UEAWildfireChart">
+        <div class="popup popup--active" id="popup--earthquaked-dashboard">
             <div class="popup__container">
                 <a href="#" class="popup__close">&times;</a>
 
@@ -218,7 +218,14 @@
                     </div>
                     <hr>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        The United States Geological Survey (USGS) report earthquakes happening in real-time across the globe. Information about these earthquakes, such as the location, magnitude and depth, are accessible through the Geological Survey API.
+                    </p>
+                    <p>
+                        I built a <span style="color: var(--colour-secondary);">dashboard</span> to visualise real-time earthquake data on an interative map of the globe.
+                    </p>
+                    <p><hr></p>
+                    <p>
+                        <img style="width: 100%; height: auto;" src="images/earthquake-dashboard.png" alt="screenshot of real-time earthquake dashboard">
                     </p>
                     <div>
                         <a href="#" class="popup__close--btn"><button type="button" class="btn__dark">Close</button></a>

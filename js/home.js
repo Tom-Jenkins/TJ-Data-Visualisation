@@ -164,21 +164,41 @@ document.addEventListener("keydown", (e) => {
 
 // Declare variables for touch events
 let startX;
+let startY;
 let endX;
+let isScrolling = false; // Track whether the user is scrolling
 
 // Touch event handlers
 carouselContainer.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+  endX = startX; // Reset endX to prevent undefined or stale values
+  isScrolling = false; // Reset scrolling flag
   // console.log(startX);
 });
 
 carouselContainer.addEventListener("touchmove", (e) => {
-  e.preventDefault();
-  endX = e.touches[0].clientX;
+  const touch = e.touches[0];
+  const deltaX = Math.abs(touch.clientX - startX);
+  const deltaY = Math.abs(touch.clientY - (startY || touch.clientY)); // Handle undefined startY
+
+  // Detect if the user is scrolling vertically
+  if (!isScrolling && deltaY > deltaX) {
+    isScrolling = true; // User intends to scroll, do NOT block scrolling
+    return; // Exit early, do not call preventDefault()
+  }
+
+  // Prevent default only if horizontal swipe is dominant
+  if (!isScrolling) {
+    e.preventDefault();
+  };
+
+  endX = touch.clientX; // Last position of touch
 }, { passive: false });
 
 carouselContainer.addEventListener("touchend", () => {
-  // console.log(endX);
+  if (isScrolling) return; // Don't trigger carousel movement if it was a scroll
+  
   const diffX = startX - endX;
   // console.log(diffX);
 
@@ -190,25 +210,4 @@ carouselContainer.addEventListener("touchend", () => {
   else if (diffX < -50) {
       moveCarouselLeft();
   };
-
-  // Reset variables to ensure a new swipe can be detected
-  startX = 0;
-  endX = 0;
 });
-
-// carousel.addEventListener("touchcancel", () => {
-//   const diff = startX - endX;
-
-//   // Swipe left (next)
-//   if (diff > 50) {
-//       moveCarouselRight();
-//   }
-//   // Swipe right (prev)
-//   else if (diff < -50) {
-//       moveCarouselLeft();
-//   };
-
-//   // Reset variables to ensure a new swipe can be detected
-//   startX = 0;
-//   endX = 0;
-// });

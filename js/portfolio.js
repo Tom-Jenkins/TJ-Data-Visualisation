@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const popupTriggers = document.querySelectorAll(".popup__trigger");
     const popupCloses = document.querySelectorAll(".popup__close");
     const popupClosesBtn = document.querySelectorAll(".popup__close--btn");
+    const popups = document.querySelectorAll(".popup");
 
     // Open popup event listener
     popupTriggers.forEach(trigger => {
@@ -70,6 +71,15 @@ document.addEventListener("DOMContentLoaded", () => {
         close.addEventListener("click", function (e) {
             e.preventDefault();
             this.closest(".popup").classList.remove("popup--active");
+        });
+    });
+
+    // Close popup when clicking outside of it
+    popups.forEach(popup => {
+        popup.addEventListener("click", function (e) {
+            if (e.target === this) {
+                this.classList.remove("popup--active");
+            };
         });
     });
 });
