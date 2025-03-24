@@ -95,7 +95,7 @@
                         <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                             <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
                         </svg>
-                        <a href="#" class="popup__trigger" data-target="UEAWildfireChart">
+                        <a href="#" class="popup__trigger" data-target="popup--national-contributions-map">
                             <img class="card__image" src="images/UEA_map_national_contributions.png" alt="screenshot of UEA national contributions global warming map app">
                         </a>
                     </div>
@@ -104,9 +104,6 @@
                 <div data-category="1 6 7" class="portfolio__item card">
                     <div class="card__title">Climate UEA: Wildfire Time Series</div>
                     <div class="card__content">
-                        <!-- <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-index-thumb" viewBox="0 0 16 16">
-                            <path d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 0 0 1 0V6.435l.106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 1 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.118a.5.5 0 0 1-.447-.276l-1.232-2.465-2.512-4.185a.517.517 0 0 1 .809-.631l2.41 2.41A.5.5 0 0 0 6 9.5V1.75A.75.75 0 0 1 6.75 1M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5 5 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.6 2.6 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046zm2.094 2.025"/>
-                        </svg> -->
                         <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                             <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
                         </svg>
@@ -207,28 +204,28 @@
         <!-- Popups -->
 
         <!-- Earthquake Dashboard -->
-        <div class="popup popup--active" id="popup--earthquaked-dashboard">
+        <div class="popup" id="popup--earthquaked-dashboard">
             <div class="popup__container">
                 <a href="#" class="popup__close">&times;</a>
 
                 <div class="popup__content">
-                    <h3> Real-Time Earthquake Dashboard</h3>
+                    <h3>Real-Time Earthquake Dashboard</h3>
                     <div class="popup__gotoapp">
-                        <a href="https://earthquake-dashboard.netlify.app/" target="_blank"><button type="button" class="btn__dark">Go To App</button></a>
+                        <a href="https://earthquake-dashboard.netlify.app/"><button type="button" class="btn__dark">Go To App</button></a>
                     </div>
                     <hr>
                     <p>
-                        The United States Geological Survey (USGS) reports earthquakes happening in real-time across the globe.
+                        The <a href="https://www.usgs.gov/programs/earthquake-hazards">United States Geological Survey</a> (USGS) reports earthquakes happening in real-time across the globe.
                     </p>
                     <p>
                         I built a <strong>dashboard</strong> to visualise 
                         real-time earthquake data on an <strong>interactive map</strong> of Earth. It was designed desktop-first with creative solutions to preserve functionality on smaller screens and mobile devices.
                     </p>
                     <p><hr></p>
-                    <img style="width: 100%; height: auto;" src="images/earthquake-dashboard.png" alt="screenshot of real-time earthquake dashboard">
+                    <img class="popup__image" src="images/earthquake-dashboard.png" alt="screenshot of real-time earthquake dashboard">
                     <hr>
                     <p>
-                        The dashboard allows you to explore Earth using a mouse or touchscreen and displays a series of points that are coloured by the magnitude (strength) of an earthquake. Some of the key stats are displayed in the information boxes and you can filter data by clicking the menu located in the top-right of the screen.
+                        This dashboard allows you to explore Earth using a mouse or touchscreen and displays a series of points representing earthquakes that are coloured by the magnitude (strength) of an earthquake. Some of the key stats are displayed in the information boxes and you can filter data by clicking the menu located in the top-right of the screen.
                     </p>
                     <p>
                         <strong>Tools</strong> <br>
@@ -237,13 +234,49 @@
                         Vanilla JavaScript
                     </p>
                     <p>
-                        The dashboard is accessible <a href="https://earthquake-dashboard.netlify.app/" target="_blank">online</a>. The source code for this project is available on <a href="https://github.com/Tom-Jenkins/earthquake-dashboard">GitHub</a>.
+                        The dashboard is accessible <a href="https://earthquake-dashboard.netlify.app/">online</a>. The source code for this project is available on <a href="https://github.com/Tom-Jenkins/earthquake-dashboard">GitHub</a>.
                     </p>
                     <div>
                         <a href="#" class="popup__close--btn"><button type="button" class="btn__dark">Close</button></a>
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <!-- UEA: National Contributions Map -->
+        <div class="popup popup--active" id="popup--national-contributions-map">
+            <div class="popup__container">
+                <a href="#" class="popup__close">&times;</a>
+
+                <div class="popup__content">
+                    <h3>National Contributions to Global Warming Map</h3>
+                    <div class="popup__gotoapp">
+                        <a href="https://www.uea.ac.uk/climate/climate-data/attribution-of-global-warming"><button type="button" class="btn__dark">Go To App</button></a>
+                    </div>
+                    <hr>
+                    <p>
+                        <a href="https://www.uea.ac.uk/climate">ClimateUEA</a> are a multidisciplinary team of world-leading experts in climate science whose research informs policy and shapes global responses to climate change.
+                    </p>
+                    <p>
+                        This app is one of several web applications I developed for my clients at ClimateUEA. See <a href="index.html#project">Featured Project</a> for more details.
+                    </p>
+                    <p><hr></p>
+                    <img class="popup__image" src="images/UEA_map_national_contributions.png" alt="screenshot of UEA national contributions global warming map app">
+                    <hr>
+                    <p>
+                        This interactive app allows you to explore the contributions of each country to global mean surface temperature (GMST) across different time periods since 1851. National contributions are displayed for three greenhouse gases: carbon dioxide (CO<sub>2</sub>), methane (CH<sub    >4</sub>), nitrous oxide (N<sub>2</sub>O), and the sum of all three gases. The <strong>EU27</strong> toggle aggregates or disaggregates the contributions from EU27 member states.
+                    </p>
+                    <p>
+                        <strong>Tools</strong> <br>
+                        <a href="https://www.npmjs.com/">Node Package Manager</a> <br>
+                        <a href="https://getbootstrap.com/">Bootstrap</a> <br>
+                        <a href="https://leafletjs.com/">Leaflet</a> <br>
+                        Vanilla JavaScript
+                    </p>
+                    <div>
+                        <a href="#" class="popup__close--btn"><button type="button" class="btn__dark">Close</button></a>
+                    </div>
+                </div>
             </div>
         </div>
     
