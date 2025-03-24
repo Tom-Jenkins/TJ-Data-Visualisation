@@ -43,3 +43,8 @@ section {
     /* section matches navbar height when anchor clicked */
     scroll-margin-top: var(--navbar-height);
 }
+
+a {
+    text-decoration: none;
+    color: var(--colour-secondary);
+}
