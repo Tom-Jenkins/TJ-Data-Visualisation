@@ -48,3 +48,8 @@ a {
     text-decoration: none;
     color: var(--colour-secondary);
 }
+
+hr {
+    border: none;
+    border-top: 1px solid #d3d3d3;
+  }
