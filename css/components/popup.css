@@ -86,6 +86,10 @@
 
         & > div {
             padding: 0 1rem;
+
+            & > p {
+                padding: 0 .75rem;
+            }
         }
     }
 }
