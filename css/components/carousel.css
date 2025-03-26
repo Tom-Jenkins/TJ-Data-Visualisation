@@ -31,12 +31,13 @@
 
     & > p {
         text-align: inherit;
-        font-size: 1.9rem;
+        font-size: 1.8rem;
 
         & > span {
             display: block;
             max-width: 95%;
             justify-self: center;
+            font-size: 1.5rem;
 
             & > a {
                 text-decoration: none;
