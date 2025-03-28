@@ -197,7 +197,7 @@
 .project__paragraph {
     margin-bottom: 5rem;
     /* Max width using X characters */
-    max-width: 90ch;
+    max-width: 85ch;
     text-align: left;
 
     & > a {
