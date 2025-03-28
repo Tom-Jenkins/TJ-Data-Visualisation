@@ -2,7 +2,11 @@
     /* background-image: linear-gradient(to top, var(--colour-primary), rgba(51, 58, 86, .35)), url(../../images/cover4-min.JPG);
     background-blend-mode: screen; */
 
-    background-image: linear-gradient(to top, var(--colour-primary-opacity-bottom), var(--colour-primary-opacity-top)), url(../../images/cover.jpg);
+    background-image: linear-gradient(
+        to top,
+        var(--colour-primary-opacity-bottom),
+        var(--colour-primary-opacity-top)),
+        url(../../images/cover.jpg);
     background-blend-mode: normal;
 
     background-size: cover;
