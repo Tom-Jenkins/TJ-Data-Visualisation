@@ -71,7 +71,7 @@
 
         /* background-color: var(--colour-white);
         color: var(--colour-black); */
-        height: 62%;
+        height: 60%;
         border-bottom: .2rem solid var(--colour-white);
         transition: border-bottom .1s ease-in;
     }
