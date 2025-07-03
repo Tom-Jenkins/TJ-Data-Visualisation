@@ -73,6 +73,7 @@
                 <button type="button" class="btn__dark portfolio__btn portfolio__btn--2" data-id="2">Bioinformatics</button>
                 <button type="button" class="btn__dark portfolio__btn portfolio__btn--3" data-id="3">Dashboard</button>
                 <button type="button" class="btn__dark portfolio__btn portfolio__btn--4" data-id="4">Map</button>
+                <button type="button" class="btn__dark portfolio__btn portfolio__btn--8" data-id="8">React</button>
                 <button type="button" class="btn__dark portfolio__btn portfolio__btn--6" data-id="6">Time Series</button>
                 <button type="button" class="btn__dark portfolio__btn portfolio__btn--7" data-id="7">Web App</button>
             </div>
@@ -127,6 +128,18 @@
                     </div>
                 </div>
 
+                <div data-category="1 2 7 8" class="portfolio__item card">
+                    <div class="card__title">LobsterGeneX React App</div>
+                    <div class="card__content">
+                        <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                        </svg>
+                        <a href="#" class="popup__trigger" data-target="popup--lobstergenex">
+                            <img class="card__image" src="images/LobsterGeneX.png" alt="screenshot of LobsterGeneX app">
+                        </a>
+                    </div>
+                </div>
+
                 <div data-category="1 2 7" class="portfolio__item card">
                     <div class="card__title">Assembly Stats Viewer App</div>
                     <div class="card__content">
@@ -159,18 +172,6 @@
                         </svg>
                         <a href="#" class="popup__trigger" data-target="popup--national-contributions-table">
                             <img class="card__image" src="images/UEA_table_national_contributions.png" alt="screenshot of UEA global warming table app">
-                        </a>
-                    </div>
-                </div>
-
-                <div data-category="1 2 7" class="portfolio__item card">
-                    <div class="card__title">LobsterGeneX App</div>
-                    <div class="card__content">
-                        <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                            <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                        </svg>
-                        <a href="#" class="popup__trigger" data-target="popup--lobstergenex">
-                            <img class="card__image" src="images/LobsterGeneX.png" alt="screenshot of LobsterGeneX app">
                         </a>
                     </div>
                 </div>
@@ -273,7 +274,7 @@
                         <a href="https://www.npmjs.com/">Node Package Manager</a> <br>
                         <a href="https://getbootstrap.com/">Bootstrap</a> <br>
                         <a href="https://leafletjs.com/">Leaflet</a> <br>
-                        <a href="https://echarts.apache.org/en/index.html">ECharts</a>
+                        <a href="https://echarts.apache.org/en/index.html">Apache ECharts</a>
                     </p>
                     <div>
                         <a href="#" class="popup__close--btn"><button type="button" class="btn__dark">Close</button></a>
@@ -309,7 +310,7 @@
                         <strong>Tools</strong> <br>
                         <a href="https://www.npmjs.com/">Node Package Manager</a> <br>
                         <a href="https://getbootstrap.com/">Bootstrap</a> <br>
-                        <a href="https://echarts.apache.org/en/index.html">ECharts</a>
+                        <a href="https://echarts.apache.org/en/index.html">Apache ECharts</a>
                     </p>
                     <div>
                         <a href="#" class="popup__close--btn"><button type="button" class="btn__dark">Close</button></a>
@@ -381,7 +382,7 @@
                         <strong>Tools</strong> <br>
                         <a href="https://www.npmjs.com/">Node Package Manager</a> <br>
                         <a href="https://getbootstrap.com/">Bootstrap</a> <br>
-                        <a href="https://echarts.apache.org/en/index.html">ECharts</a>
+                        <a href="https://echarts.apache.org/en/index.html">Apache ECharts</a>
                     </p>
                     <p>
                         The app is accessible <a href="https://assemblystatsviewer.netlify.app/">online</a>. The source code for this project is available on <a href="https://github.com/Tom-Jenkins/AssemblyStatsViewer">GitHub</a>.
@@ -484,7 +485,7 @@
                         I am part of a team of scientists whose aim is to sequence and assemble the first reference genome for the European lobster (<em>Homarus gammarus</em>). This will be an important genomic resource for future research in crustacean evolutionary biology, longevity and immunity.
                     </p>
                     <p>
-                        I designed and built a <strong>web application</strong> that will accompany the research article (<em>in prep</em>) which allows users to view expression profiles for protein-coding genes across different tissue types. The genes were annotated by the <a href="https://metazoa.ensembl.org/Homarus_gammarus_gca958450375v1/Info/Annotation/#genebuild">Ensembl annotation pipeline</a>. You can find out more details about each gene by clicking the gene ID located on the top-left of the chart.
+                        I designed and built a <strong> React web application</strong> that will accompany the research article (<em>in prep</em>) which allows users to view expression profiles for protein-coding genes across different tissue types. The genes were annotated by the <a href="https://metazoa.ensembl.org/Homarus_gammarus_gca958450375v1/Info/Annotation/#genebuild">Ensembl annotation pipeline</a>. You can find out more details about each gene by clicking the gene ID located at the top-left of the chart.
                     </p>
                     <p><hr></p>
                     <img class="popup__image" src="images/LobsterGeneX.png" alt="screenshot of LobsterGeneX app">
@@ -494,9 +495,10 @@
                     </p>
                     <p>
                         <strong>Tools</strong> <br>
-                        <a href="https://www.npmjs.com/">Node Package Manager</a> <br>
-                        <a href="https://getbootstrap.com/">Bootstrap</a> <br>
-                        <a href="https://echarts.apache.org/en/index.html">ECharts</a>
+                        <a href="https://react.dev/">React</a> <br>
+                        <a href="https://vite.dev/">Vite</a> <br>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox">CSS Flexbox</a> <br>
+                        <a href="https://echarts.apache.org/en/index.html">Apache ECharts</a>
                     </p>
                     <p>
                         The app is accessible <a href="https://lobstergenex.com">online</a>. The source code for this project is available on <a href="https://github.com/Tom-Jenkins/LobsterGeneX">GitHub</a>.
