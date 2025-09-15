@@ -1,490 +1,904 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tom Jenkins Data Visualisation</title>
-        <!-- CSS -->
-        <!-- <link rel="icon" href="images/logo-dark.ico" type="image/ico" /> -->
-        <link rel="icon" type="image/svg+xml" href="images/logo-dark.svg" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
-        <!-- JavaScript -->
-        <script defer type="module" src="js/main.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tom Jenkins Data Visualisation</title>
+    <!-- CSS -->
+    <!-- <link rel="icon" href="images/logo-dark.ico" type="image/ico" /> -->
+    <link rel="icon" type="image/svg+xml" href="images/logo-dark.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- JavaScript -->
+    <script defer type="module" src="js/main.js"></script>
+  </head>
 
-    <body>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo--container">
+        <a href="index.html" class="navbar__logo--link">
+          <img src="images/logo.svg" alt="website logo" class="navbar__logo" />
+        </a>
+      </div>
 
-        <nav class="navbar">
+      <!-- Mobile Screen Navigation -->
+      <div class="nav__mobile">
+        <input
+          title="checkbox"
+          type="checkbox"
+          class="nav__mobile--checkbox"
+          id="nav__toggle"
+        />
 
-            <div class="navbar__logo--container">
-                <a href="index.html" class="navbar__logo--link">
-                    <img src="images/logo.svg" alt="website logo" class="navbar__logo">
-                </a>
-            </div>
-            
-            <!-- Mobile Screen Navigation -->
-            <div class="nav__mobile">
+        <label for="nav__toggle" class="nav__mobile--btn">
+          <span class="nav__mobile--icon">&nbsp;</span>
+        </label>
 
-                <input title="checkbox" type="checkbox" class="nav__mobile--checkbox" id="nav__toggle">
+        <div class="nav__mobile--background">&nbsp;</div>
 
-                <label for="nav__toggle" class="nav__mobile--btn">
-                    <span class="nav__mobile--icon">&nbsp;</span>
-                </label>
-
-                <div class="nav__mobile--background">&nbsp;</div>
-
-                <nav class="nav__mobile--menu">
-                    <ul class="nav__mobile--list">
-                        <li class="nav__mobile--item"><a href="index.html" class="nav__mobile--link">Home</a></li>
-                        <li class="nav__mobile--item"><a href="portfolio.html" class="nav__mobile--link">Portfolio</a></li>
-                        <li class="nav__mobile--item"><a href="index.html#about" class="nav__mobile--link">About</a></li>
-                        <li class="nav__mobile--item"><a href="index.html#services" class="nav__mobile--link">Services</a></li>
-                        <li class="nav__mobile--item"><a href="index.html#contact" class="nav__mobile--link">Contact</a></li>
-                    </ul>
-                </nav>
-
-            </div>
-            
-            <!-- Laptop/Desktop Screen Navigation -->
-            <div class="nav__laptop">
-                <a href="index.html" class="nav__laptop--btn">Home</a>
-                <a href="portfolio.html" class="nav__laptop--btn">Portfolio</a>
-                <a href="index.html#about" class="nav__laptop--btn">About</a>
-                <a href="index.html#services" class="nav__laptop--btn">Services</a>
-                <a href="index.html#contact" class="nav__laptop--btn">Contact</a>
-            </div>
-            
+        <nav class="nav__mobile--menu">
+          <ul class="nav__mobile--list">
+            <li class="nav__mobile--item">
+              <a href="index.html" class="nav__mobile--link">Home</a>
+            </li>
+            <li class="nav__mobile--item">
+              <a href="portfolio.html" class="nav__mobile--link">Portfolio</a>
+            </li>
+            <li class="nav__mobile--item">
+              <a href="index.html#about" class="nav__mobile--link">About</a>
+            </li>
+            <li class="nav__mobile--item">
+              <a href="index.html#services" class="nav__mobile--link"
+                >Services</a
+              >
+            </li>
+            <li class="nav__mobile--item">
+              <a href="index.html#contact" class="nav__mobile--link">Contact</a>
+            </li>
+          </ul>
         </nav>
+      </div>
 
-        <!-- Content -->
-        <div class="hero row-top" id="hero">
+      <!-- Laptop/Desktop Screen Navigation -->
+      <div class="nav__laptop">
+        <a href="index.html" class="nav__laptop--btn">Home</a>
+        <a href="portfolio.html" class="nav__laptop--btn">Portfolio</a>
+        <a href="index.html#about" class="nav__laptop--btn">About</a>
+        <a href="index.html#services" class="nav__laptop--btn">Services</a>
+        <a href="index.html#contact" class="nav__laptop--btn">Contact</a>
+      </div>
+    </nav>
 
-            <div class="row">
-
-                <div class="hero__main">
-                    <!-- <img src="images/logo.svg" alt="website logo" class="hero__logo"> -->
-                    <!-- <h1><img src="images/logo.svg" alt="website logo" class="hero__logo"> Tom Jenkins</h1> -->
-                    <!-- <img src="images/logo.svg" alt="website logo" class="hero__logo"> -->
-                    <h2>
-                        <svg class="hero__logo--t" xmlns="http://www.w3.org/2000/svg" version="1.0" preserveAspectRatio="xMidYMid meet" viewBox="119.9 155 272.2 202">
-                            <g fill="white" stroke="none" stroke-width="50" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
-                                <path d="M2791 3244 c-12 -15 -21 -33 -21 -40 0 -12 -127 -14 -779 -14 l-779 0 -6 -92 c-3 -51 -6 -103 -7 -116 -1 -31 28 -62 58 -62 32 0 63 17 63 35 0 8 6 15 12 15 7 0 107 -31 223 -69 115 -38 297 -97 404 -131 l194 -62 -48 -48 c-33 -33 -59 -50 -84 -55 -20 -4 -55 -15 -78 -25 l-43 -19 0 -79 c0 -43 3 -82 7 -85 3 -4 14 4 22 17 24 36 281 324 312 349 14 12 76 68 137 125 61 56 117 102 125 102 13 0 203 -208 196 -214 -2 -2 -96 -8 -207 -14 -135 -6 -208 -14 -215 -22 -12 -13 218 -8 465 9 l103 7 28 -29 c22 -23 32 -28 55 -23 31 8 62 40 62 66 0 60 -86 86 -124 37 -19 -24 -29 -27 -76 -26 l-55 1 -103 116 -103 117 155 3 156 3 0 55 c0 43 4 56 18 61 32 11 52 36 52 65 0 64 -80 92 -119 42z m-321 -230 c0 -4 -21 -25 -47 -47 -27 -23 -93 -85 -148 -139 l-100 -97 -255 80 c-390 122 -590 190 -590 200 0 5 231 9 570 9 314 0 570 -3 570 -6z"/>
-                                <path d="M1532 2819 c-13 -5 -29 -22 -34 -37 -9 -24 -19 -30 -63 -38 -48 -9 -53 -8 -69 14 -37 49 -128 0 -112 -61 16 -65 85 -77 121 -20 16 26 29 33 70 41 42 7 53 6 70 -9 11 -10 33 -19 48 -21 25 -3 43 -25 143 -185 112 -179 114 -182 108 -228 l-7 -46 -185 -126 c-159 -108 -187 -124 -203 -115 -47 30 -99 -4 -99 -62 0 -85 124 -88 132 -3 3 29 16 41 150 132 80 55 164 112 185 127 35 25 41 26 76 15 l37 -12 0 -317 0 -318 170 0 170 0 0 575 c0 316 -4 575 -8 575 -13 0 -271 -288 -315 -350 -8 -12 -27 -22 -42 -23 -25 -2 -33 7 -83 88 -30 50 -83 135 -119 189 -57 88 -63 102 -54 123 16 36 14 51 -14 78 -26 27 -37 29 -73 14z"/>
-                            </g>
-                        </svg>
-                        om Jenkins
-                    </h2>
-                    <h1>data visualisation</h1>    
-                    <!-- <p>transforming complex data into clear, compelling visualisations</p> -->
-                    <!-- <p>creating interactive data experiences that empower insights</p> -->
-                    <div class="hero__btn">
-                        <a href="portfolio.html"><button type="button" class="btn">See Portfolio</button></a>
-                    </div>
-                </div>
-                
-            </div>
-
+    <!-- Content -->
+    <div class="hero row-top" id="hero">
+      <div class="row">
+        <div class="hero__main">
+          <!-- <img src="images/logo.svg" alt="website logo" class="hero__logo"> -->
+          <!-- <h1><img src="images/logo.svg" alt="website logo" class="hero__logo"> Tom Jenkins</h1> -->
+          <!-- <img src="images/logo.svg" alt="website logo" class="hero__logo"> -->
+          <h2>
+            <svg
+              class="hero__logo--t"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.0"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="119.9 155 272.2 202"
+            >
+              <g
+                fill="white"
+                stroke="none"
+                stroke-width="50"
+                transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+              >
+                <path
+                  d="M2791 3244 c-12 -15 -21 -33 -21 -40 0 -12 -127 -14 -779 -14 l-779 0 -6 -92 c-3 -51 -6 -103 -7 -116 -1 -31 28 -62 58 -62 32 0 63 17 63 35 0 8 6 15 12 15 7 0 107 -31 223 -69 115 -38 297 -97 404 -131 l194 -62 -48 -48 c-33 -33 -59 -50 -84 -55 -20 -4 -55 -15 -78 -25 l-43 -19 0 -79 c0 -43 3 -82 7 -85 3 -4 14 4 22 17 24 36 281 324 312 349 14 12 76 68 137 125 61 56 117 102 125 102 13 0 203 -208 196 -214 -2 -2 -96 -8 -207 -14 -135 -6 -208 -14 -215 -22 -12 -13 218 -8 465 9 l103 7 28 -29 c22 -23 32 -28 55 -23 31 8 62 40 62 66 0 60 -86 86 -124 37 -19 -24 -29 -27 -76 -26 l-55 1 -103 116 -103 117 155 3 156 3 0 55 c0 43 4 56 18 61 32 11 52 36 52 65 0 64 -80 92 -119 42z m-321 -230 c0 -4 -21 -25 -47 -47 -27 -23 -93 -85 -148 -139 l-100 -97 -255 80 c-390 122 -590 190 -590 200 0 5 231 9 570 9 314 0 570 -3 570 -6z"
+                />
+                <path
+                  d="M1532 2819 c-13 -5 -29 -22 -34 -37 -9 -24 -19 -30 -63 -38 -48 -9 -53 -8 -69 14 -37 49 -128 0 -112 -61 16 -65 85 -77 121 -20 16 26 29 33 70 41 42 7 53 6 70 -9 11 -10 33 -19 48 -21 25 -3 43 -25 143 -185 112 -179 114 -182 108 -228 l-7 -46 -185 -126 c-159 -108 -187 -124 -203 -115 -47 30 -99 -4 -99 -62 0 -85 124 -88 132 -3 3 29 16 41 150 132 80 55 164 112 185 127 35 25 41 26 76 15 l37 -12 0 -317 0 -318 170 0 170 0 0 575 c0 316 -4 575 -8 575 -13 0 -271 -288 -315 -350 -8 -12 -27 -22 -42 -23 -25 -2 -33 7 -83 88 -30 50 -83 135 -119 189 -57 88 -63 102 -54 123 16 36 14 51 -14 78 -26 27 -37 29 -73 14z"
+                />
+              </g>
+            </svg>
+            om Jenkins
+          </h2>
+          <h1>data visualisation</h1>
+          <!-- <p>transforming complex data into clear, compelling visualisations</p> -->
+          <!-- <p>creating interactive data experiences that empower insights</p> -->
+          <div class="hero__btn">
+            <a href="portfolio.html"
+              ><button type="button" class="btn">See Portfolio</button></a
+            >
+          </div>
         </div>
+      </div>
+    </div>
 
-        <section class="about" id="about">
-
-            <!-- <div class="about__title">
+    <section class="about" id="about">
+      <!-- <div class="about__title">
                 <h2>About <div class="line"></div></h2>
             </div> -->
 
-            <div class="about__content">
+      <div class="about__content">
+        <svg
+          class="about__logo"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.0"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="119.9 155 272.2 202"
+        >
+          <g
+            class="about__logo"
+            fill="white"
+            stroke="none"
+            stroke-width="50"
+            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+          >
+            <path
+              d="M3570 2933 c0 -692 -3 -737 -55 -814 -13 -21 -46 -51 -72 -66 -41 -24 -59 -28 -124 -28 -67 0 -81 4 -125 30 -39 25 -56 44 -83 97 -29 58 -34 79 -39 162 l-5 96 -172 0 -173 0 5 -82 c12 -219 68 -367 181 -477 112 -110 225 -151 417 -151 63 0 137 7 174 15 148 35 271 135 341 278 74 151 73 139 77 900 l4 677 -176 0 -175 0 0 -637z"
+            />
+            <path
+              d="M2791 3244 c-12 -15 -21 -33 -21 -40 0 -12 -127 -14 -779 -14 l-779 0 -6 -92 c-3 -51 -6 -103 -7 -116 -1 -31 28 -62 58 -62 32 0 63 17 63 35 0 8 6 15 12 15 7 0 107 -31 223 -69 115 -38 297 -97 404 -131 l194 -62 -48 -48 c-33 -33 -59 -50 -84 -55 -20 -4 -55 -15 -78 -25 l-43 -19 0 -79 c0 -43 3 -82 7 -85 3 -4 14 4 22 17 24 36 281 324 312 349 14 12 76 68 137 125 61 56 117 102 125 102 13 0 203 -208 196 -214 -2 -2 -96 -8 -207 -14 -135 -6 -208 -14 -215 -22 -12 -13 218 -8 465 9 l103 7 28 -29 c22 -23 32 -28 55 -23 31 8 62 40 62 66 0 60 -86 86 -124 37 -19 -24 -29 -27 -76 -26 l-55 1 -103 116 -103 117 155 3 156 3 0 55 c0 43 4 56 18 61 32 11 52 36 52 65 0 64 -80 92 -119 42z m-321 -230 c0 -4 -21 -25 -47 -47 -27 -23 -93 -85 -148 -139 l-100 -97 -255 80 c-390 122 -590 190 -590 200 0 5 231 9 570 9 314 0 570 -3 570 -6z"
+            />
+            <path
+              d="M1532 2819 c-13 -5 -29 -22 -34 -37 -9 -24 -19 -30 -63 -38 -48 -9 -53 -8 -69 14 -37 49 -128 0 -112 -61 16 -65 85 -77 121 -20 16 26 29 33 70 41 42 7 53 6 70 -9 11 -10 33 -19 48 -21 25 -3 43 -25 143 -185 112 -179 114 -182 108 -228 l-7 -46 -185 -126 c-159 -108 -187 -124 -203 -115 -47 30 -99 -4 -99 -62 0 -85 124 -88 132 -3 3 29 16 41 150 132 80 55 164 112 185 127 35 25 41 26 76 15 l37 -12 0 -317 0 -318 170 0 170 0 0 575 c0 316 -4 575 -8 575 -13 0 -271 -288 -315 -350 -8 -12 -27 -22 -42 -23 -25 -2 -33 7 -83 88 -30 50 -83 135 -119 189 -57 88 -63 102 -54 123 16 36 14 51 -14 78 -26 27 -37 29 -73 14z"
+            />
+          </g>
+        </svg>
 
-                <svg class="about__logo" xmlns="http://www.w3.org/2000/svg" version="1.0" preserveAspectRatio="xMidYMid meet" viewBox="119.9 155 272.2 202">
-                    <g class="about__logo" fill="white" stroke="none" stroke-width="50" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
-                        <path d="M3570 2933 c0 -692 -3 -737 -55 -814 -13 -21 -46 -51 -72 -66 -41 -24 -59 -28 -124 -28 -67 0 -81 4 -125 30 -39 25 -56 44 -83 97 -29 58 -34 79 -39 162 l-5 96 -172 0 -173 0 5 -82 c12 -219 68 -367 181 -477 112 -110 225 -151 417 -151 63 0 137 7 174 15 148 35 271 135 341 278 74 151 73 139 77 900 l4 677 -176 0 -175 0 0 -637z"/>
-                        <path d="M2791 3244 c-12 -15 -21 -33 -21 -40 0 -12 -127 -14 -779 -14 l-779 0 -6 -92 c-3 -51 -6 -103 -7 -116 -1 -31 28 -62 58 -62 32 0 63 17 63 35 0 8 6 15 12 15 7 0 107 -31 223 -69 115 -38 297 -97 404 -131 l194 -62 -48 -48 c-33 -33 -59 -50 -84 -55 -20 -4 -55 -15 -78 -25 l-43 -19 0 -79 c0 -43 3 -82 7 -85 3 -4 14 4 22 17 24 36 281 324 312 349 14 12 76 68 137 125 61 56 117 102 125 102 13 0 203 -208 196 -214 -2 -2 -96 -8 -207 -14 -135 -6 -208 -14 -215 -22 -12 -13 218 -8 465 9 l103 7 28 -29 c22 -23 32 -28 55 -23 31 8 62 40 62 66 0 60 -86 86 -124 37 -19 -24 -29 -27 -76 -26 l-55 1 -103 116 -103 117 155 3 156 3 0 55 c0 43 4 56 18 61 32 11 52 36 52 65 0 64 -80 92 -119 42z m-321 -230 c0 -4 -21 -25 -47 -47 -27 -23 -93 -85 -148 -139 l-100 -97 -255 80 c-390 122 -590 190 -590 200 0 5 231 9 570 9 314 0 570 -3 570 -6z"/>
-                        <path d="M1532 2819 c-13 -5 -29 -22 -34 -37 -9 -24 -19 -30 -63 -38 -48 -9 -53 -8 -69 14 -37 49 -128 0 -112 -61 16 -65 85 -77 121 -20 16 26 29 33 70 41 42 7 53 6 70 -9 11 -10 33 -19 48 -21 25 -3 43 -25 143 -185 112 -179 114 -182 108 -228 l-7 -46 -185 -126 c-159 -108 -187 -124 -203 -115 -47 30 -99 -4 -99 -62 0 -85 124 -88 132 -3 3 29 16 41 150 132 80 55 164 112 185 127 35 25 41 26 76 15 l37 -12 0 -317 0 -318 170 0 170 0 0 575 c0 316 -4 575 -8 575 -13 0 -271 -288 -315 -350 -8 -12 -27 -22 -42 -23 -25 -2 -33 7 -83 88 -30 50 -83 135 -119 189 -57 88 -63 102 -54 123 16 36 14 51 -14 78 -26 27 -37 29 -73 14z"/>
-                    </g>
-                </svg>
+        <p class="about__text">
+          <span class="about__text--title">
+            Welcome to <strong>Tom Jenkins Data Visualisation</strong>
+          </span>
 
-                <p class="about__text">
-                    <span class="about__text--title">
-                        Welcome to <strong>Tom Jenkins Data Visualisation</strong>
-                    </span>
+          <br /><br />
+          I am a freelance consultant in <strong>web application</strong> and
+          <strong>dashboard</strong> development, specialising in transforming
+          complex scientific and industry data into clear, insightful
+          <strong>interactive visualisations</strong>. <br /><br />
+          I am particularly skilled at processing geospatial data and developing
+          bespoke <strong>interactive maps</strong>. My prospective clients
+          include individuals, research institutions and companies. Scroll down
+          to see services and testimonials.
+        </p>
+      </div>
 
-                    <br><br>
-                    I am a freelance consultant in <strong>web application</strong> and <strong>dashboard</strong> development,
-                    specialising in transforming complex scientific and industry data into clear, insightful <strong>interactive visualisations</strong>.
-                    <br><br>
-                    I am particularly skilled at processing geospatial data and developing bespoke <strong>interactive maps</strong>.
-                    My prospective clients include individuals, research institutions and companies. Scroll down to see services and testimonials.
-                </p>
+      <div>
+        <a href="index.html#contact"
+          ><button type="button" class="btn__dark">See Contact</button></a
+        >
+      </div>
+    </section>
 
-            </div>
+    <section class="services" id="services">
+      <div class="services__title">
+        <h2>
+          Services
+          <div class="line"></div>
+        </h2>
+      </div>
 
-            <div>
-                <a href="index.html#contact"><button type="button" class="btn__dark">See Contact</button></a>
-            </div>
+      <div class="row services__content">
+        <div class="services__box">
+          <div class="services__box--circle">
+            <svg
+              class="services__box--icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"
+              />
+            </svg>
+          </div>
+          <div class="services__box--text">
+            <h3>Web Apps</h3>
+            <p>Bespoke user-friendly web applications tailored to your needs</p>
+          </div>
+        </div>
 
-        </section>
+        <div class="services__box">
+          <div class="services__box--circle">
+            <svg
+              class="services__box--icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </div>
+          <div class="services__box--text">
+            <h3>Dashboards</h3>
+            <p>Interactive dashboards for data visualisation and insights</p>
+          </div>
+        </div>
 
+        <div class="services__box">
+          <div class="services__box--circle">
+            <svg
+              class="services__box--icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"
+              />
+            </svg>
+          </div>
+          <div class="services__box--text">
+            <h3>Maps</h3>
+            <p>
+              Custom interactive maps with real-time data and geospatial
+              analysis
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <section class="services" id="services">
+      <div class="project__portfolio--btn">
+        <a href="portfolio.html"
+          ><button type="button" class="btn__dark">See Portfolio</button></a
+        >
+      </div>
+    </section>
 
-            <div class="services__title">
-                <h2>Services <div class="line"></div></h2>
-            </div>
+    <section class="project" id="project">
+      <div class="project__title">
+        <h2 class="h2-letter-spacing">
+          Featured Project
+          <div class="line"></div>
+        </h2>
+      </div>
 
-            <div class="row services__content">
+      <div class="project__paragraph--container">
+        <p class="project__paragraph">
+          I developed four interactive web applications for
+          <a href="https://www.uea.ac.uk/climate">ClimateUEA</a> (University of
+          East Anglia). <br /><br />
+          Two apps were designed to showcase their
+          <strong>State of Wildfires</strong> data published in
+          <a href="https://doi.org/10.5194/essd-16-3601-2024">2024</a>, which
+          will be updated annually. The other two apps were built to visualise
+          the <strong>National Contributions to Global Warming</strong> data
+          published in
+          <a href="https://doi.org/10.1038/s41597-023-02041-1">2023</a> and
+          display the percentage change in global mean surface temperature
+          across different time periods for each country. <br /><br />
+          Open the tabs below to reveal more information about this project.
+          Links to the apps hosted on the ClimateUEA website can also be found
+          below.
+        </p>
+      </div>
 
-                <div class="services__box">
-                    <div class="services__box--circle">
-                        <svg class="services__box--icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
-                        </svg>
-                    </div>
-                    <div class="services__box--text">
-                        <h3>Web Apps</h3>
-                        <p>Bespoke user-friendly web applications tailored to your needs</p>
-                    </div> 
-                </div>
+      <div class="row project__box--container">
+        <div class="project__box">
+          <h3 data-target="objectives">
+            <svg
+              class="accordion__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-card-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+              />
+              <path
+                d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+              />
+            </svg>
+            <span>Objectives</span>
+            <svg
+              class="accordion__plus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+              />
+            </svg>
+            <svg
+              class="accordion__minus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-dash-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+              />
+            </svg>
+          </h3>
 
-                <div class="services__box">
-                    <div class="services__box--circle">
-                        <svg class="services__box--icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
-                        </svg>
-                    </div>
-                    <div class="services__box--text">
-                        <h3>Dashboards</h3>
-                        <p>Interactive dashboards for data visualisation and insights</p>
-                    </div>
-                </div>
+          <div class="accordion" id="accordion--objectives">
+            <br />
+            <hr class="accordion--line" />
+            <ul class="ul-list accordion__points">
+              <li>
+                Preprocess geospatial data and convert into JSON and GeoJSON
+                format
+              </li>
+              <li>
+                Build self-contained web applications using JavaScript that can
+                be deployed on the ClimateUEA website
+              </li>
+            </ul>
+          </div>
+        </div>
 
-                <div class="services__box">
-                    <div class="services__box--circle">
-                        <svg class="services__box--icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"/>
-                        </svg>
-                    </div>
-                    <div class="services__box--text">
-                        <h3>Maps</h3>
-                        <p>Custom interactive maps with real-time data and geospatial analysis</p>
-                    </div>
-                </div>
+        <div class="project__box">
+          <h3 data-target="processing">
+            <svg
+              class="accordion__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-activity"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"
+              />
+            </svg>
+            <span>Data Processing</span>
+            <svg
+              class="accordion__plus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+              />
+            </svg>
+            <svg
+              class="accordion__minus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-dash-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+              />
+            </svg>
+          </h3>
 
-            </div>
+          <div class="accordion" id="accordion--processing">
+            <br />
+            <hr class="accordion--line" />
+            <ul class="ul-list accordion__points">
+              <li>
+                Developed Bash and Python scripts to automate the processing and
+                conversion of geospatial data in CSV format to JSON or GeoJSON
+                files
+              </li>
+              <li>
+                Calculated new statistics from the data, such as percentage
+                change in temperature for each country across different time
+                periods (e.g. 1851 to 2022)
+              </li>
+            </ul>
+          </div>
+        </div>
 
-            <div class="project__portfolio--btn">
-                <a href="portfolio.html"><button type="button" class="btn__dark">See Portfolio</button></a>
-            </div>
+        <div class="project__box">
+          <h3 data-target="development">
+            <svg
+              class="accordion__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-code-square"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+              />
+              <path
+                d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"
+              />
+            </svg>
+            <span>Agile Development</span>
+            <svg
+              class="accordion__plus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+              />
+            </svg>
+            <svg
+              class="accordion__minus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-dash-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+              />
+            </svg>
+          </h3>
 
-        </section>
+          <div class="accordion" id="accordion--development">
+            <br />
+            <hr class="accordion--line" />
+            <ul class="ul-list accordion__points">
+              <li>
+                Collaborated closely with the team to create working solutions
+                quickly
+              </li>
+              <li>
+                Continuously refined app user-interface and features based on
+                feedback
+              </li>
+              <li>
+                Adapted to bespoke requests, such as adding information popups
+                and options for users to download map images and data
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="project__box">
+          <h3 data-target="deployment">
+            <svg
+              class="accordion__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-window-desktop"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"
+              />
+              <path
+                d="M2.375 1A2.366 2.366 0 0 0 0 3.357v9.286A2.366 2.366 0 0 0 2.375 15h11.25A2.366 2.366 0 0 0 16 12.643V3.357A2.366 2.366 0 0 0 13.625 1zM1 3.357C1 2.612 1.611 2 2.375 2h11.25C14.389 2 15 2.612 15 3.357V4H1zM1 5h14v7.643c0 .745-.611 1.357-1.375 1.357H2.375A1.366 1.366 0 0 1 1 12.643z"
+              />
+            </svg>
+            <span>Deployment</span>
+            <svg
+              class="accordion__plus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+              />
+            </svg>
+            <svg
+              class="accordion__minus"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-dash-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+              />
+            </svg>
+          </h3>
 
-        <section class="project" id="project">
+          <div class="accordion" id="accordion--deployment">
+            <br />
+            <hr class="accordion--line" />
+            <ul class="ul-list accordion__points">
+              <li>Worked with UEA IT team to deploy each app on AWS Amplify</li>
+              <li>
+                Set up continuous integration and version control via Bitbucket
+                to allow rapid updates to applications
+              </li>
+              <li>
+                Apps in production were embedded into the ClimateUEA web pages
+                using iFrames
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-            <div class="project__title">
-                <h2 class="h2-letter-spacing">Featured Project <div class="line"></div></h2>
-            </div>
-            
-            <div class="project__paragraph--container">
-                <p class="project__paragraph">
-                    I developed four interactive web applications for <a href="https://www.uea.ac.uk/climate">ClimateUEA</a> (University of East Anglia). 
-                    <br><br>
-                    Two apps were designed to showcase their <strong>State of Wildfires</strong> data published in <a href="https://doi.org/10.5194/essd-16-3601-2024">2024</a>, which will be updated annually. The other two apps were built to visualise the <strong>National Contributions to Global Warming</strong> data published in <a href="https://doi.org/10.1038/s41597-023-02041-1">2023</a> and display the percentage change in global mean surface temperature across different time periods for each country. 
-                    <br><br>
-                    Open the tabs below to reveal more information about this project. Links to the apps hosted on the ClimateUEA website can also be found below.
-                </p> 
-            </div>   
+      <div class="row project__card--container">
+        <div class="card">
+          <div class="card__title">State of Wildfires</div>
+          <div class="card__content">
+            <svg
+              class="card__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
+              />
+            </svg>
+            <a
+              href="https://www.uea.ac.uk/climate/climate-data/state-of-wildfires"
+            >
+              <img
+                class="card__image"
+                src="images/UEA_timeseries_wildfires.png"
+                alt="screenshot of UEA wildfire time series app"
+              />
+            </a>
+          </div>
+        </div>
 
-            <div class="row project__box--container">
+        <div class="card">
+          <div class="card__title">
+            National Contributions to Global Warming
+          </div>
+          <div class="card__content">
+            <svg
+              class="card__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
+              />
+            </svg>
+            <a
+              href="https://www.uea.ac.uk/climate/climate-data/attribution-of-global-warming"
+            >
+              <img
+                class="card__image"
+                src="images/UEA_map_national_contributions.png"
+                alt="screenshot of UEA global warming map app"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-                <div class="project__box">
-                    <h3 data-target="objectives">
-                        <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
-                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
-                            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-                        </svg>
-                        <span>Objectives</span>
-                        <svg class="accordion__plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                        </svg>
-                        <svg class="accordion__minus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
-                        </svg>
-                    </h3>
+      <div class="project__portfolio--btn">
+        <a href="portfolio.html"
+          ><button type="button" class="btn__dark">See Portfolio</button></a
+        >
+      </div>
+    </section>
 
-                    <div class="accordion" id="accordion--objectives">
-                        <br><hr class="accordion--line">
-                        <ul class="ul-list accordion__points">
-                            <li>Preprocess geospatial data and convert into JSON and GeoJSON format</li>
-                            <li>Build self-contained web applications using JavaScript that can be deployed on the ClimateUEA website</li>
-                        </ul>
-                    </div> 
-                </div>
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials__title">
+        <h2>
+          Testimonials
+          <div class="line"></div>
+        </h2>
+        <p>
+          Hear from clients and users about the products and open-source tools
+          I've developed
+        </p>
+      </div>
 
-                <div class="project__box">
-                    <h3 data-target="processing">
-                        <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"/>
-                        </svg>
-                        <span>Data Processing</span>
-                        <svg class="accordion__plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                        </svg>
-                        <svg class="accordion__minus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
-                        </svg>
-                    </h3>
-                    
-                    <div class="accordion" id="accordion--processing">
-                        <br><hr class="accordion--line">
-                        <ul class="ul-list accordion__points">
-                            <li>Developed R scripts to automate the processing and conversion of geospatial data in CSV format to JSON or GeoJSON files</li>
-                            <li>Calculated new statistics from the data, such as percentage change in temperature for each country across different time periods (e.g. 1851 to 2022)</li>
-                        </ul>
-                    </div> 
-                </div>
+      <div class="carousel__container">
+        <div class="carousel">
+          <div class="carousel__item">
+            <p>
+              <em>Testimonial from UEA colleague.</em>
+              <br /><br />
+              <span
+                ><a
+                  href="https://research-portal.uea.ac.uk/en/persons/corinne-le-quere"
+                  >Corinne Le Quéré</a
+                ></span
+              >
+              <span class="small-caps"
+                >professor of climate change science</span
+              >
+            </p>
+          </div>
 
-                <div class="project__box">
-                    <h3 data-target="development">
-                        <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                            <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"/>
-                        </svg>
-                        <span>Agile Development</span>
-                        <svg class="accordion__plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                        </svg>
-                        <svg class="accordion__minus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
-                        </svg>
-                    </h3>
-                    
-                    <div class="accordion" id="accordion--development">
-                        <br><hr class="accordion--line">
-                        <ul class="ul-list accordion__points">
-                            <li>Collaborated closely with the team to create working solutions quickly</li>
-                            <li>Continuously refined app user-interface and features based on feedback</li>
-                            <li>Adapted to bespoke requests, such as adding information popups and options for users to download map images and data</li>
-                        </ul>
-                    </div> 
-                </div>
+          <div class="carousel__item">
+            <p>
+              <em
+                >Thanks for this awesome tool [mapmixture], it's gonna be super
+                helpful for a lot of people!</em
+              >
+              <br /><br />
+              <span
+                ><a href="https://github.com/Tom-Jenkins/mapmixture/issues/6"
+                  >Carlos</a
+                ></span
+              >
+              <span class="small-caps">r package user</span>
+            </p>
+          </div>
 
-                <div class="project__box">
-                    <h3 data-target="deployment">
-                        <svg class="accordion__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-desktop" viewBox="0 0 16 16">
-                            <path d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
-                            <path d="M2.375 1A2.366 2.366 0 0 0 0 3.357v9.286A2.366 2.366 0 0 0 2.375 15h11.25A2.366 2.366 0 0 0 16 12.643V3.357A2.366 2.366 0 0 0 13.625 1zM1 3.357C1 2.612 1.611 2 2.375 2h11.25C14.389 2 15 2.612 15 3.357V4H1zM1 5h14v7.643c0 .745-.611 1.357-1.375 1.357H2.375A1.366 1.366 0 0 1 1 12.643z"/>
-                        </svg>
-                        <span>Deployment</span>
-                        <svg class="accordion__plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                        </svg>
-                        <svg class="accordion__minus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
-                        </svg>
-                    </h3>
+          <div class="carousel__item">
+            <p>
+              <em
+                >Thanks for developing this package [mapmixture], it's really
+                great!</em
+              >
+              <br /><br />
+              <span
+                ><a href="https://github.com/Tom-Jenkins/mapmixture/issues/19"
+                  >Manica</a
+                ></span
+              >
+              <span class="small-caps">r package user</span>
+            </p>
+          </div>
 
-                    <div class="accordion" id="accordion--deployment">
-                        <br><hr class="accordion--line">
-                        <ul class="ul-list accordion__points">
-                            <li>Worked with UEA IT team to deploy each app on AWS Amplify</li>
-                            <li>Set up continuous integration and version control via Bitbucket to allow rapid updates to applications</li>
-                            <li>Apps in production were embedded into the ClimateUEA web pages using iFrames</li>
-                        </ul>
-                    </div> 
-                </div>
+          <div class="carousel__item">
+            <p>
+              <em style="font-size: 1.7rem"
+                >Tom was very responsive to our requests and easy to work with.
+                He carefully designed visualisations that captured the data in
+                the way we wanted, with enhancements we hadn’t foreseen.</em
+              >
+              <br /><br />
+              <span
+                ><a
+                  href="https://research-portal.uea.ac.uk/en/persons/adam-smith"
+                  >Adam Smith</a
+                ></span
+              >
+              <span class="small-caps">senior research associate</span>
+            </p>
+          </div>
 
-            </div>
+          <div class="carousel__item">
+            <p>
+              <em
+                >Tom worked tirelessly to deliver what we needed. He got the
+                balance right between guiding how we display our work and
+                respecting its scientific roots.</em
+              >
+              <br /><br />
+              <span
+                ><a
+                  href="https://research-portal.uea.ac.uk/en/persons/matthew-jones"
+                  >Matthew Jones</a
+                ></span
+              >
+              <span class="small-caps">nerc independent research fellow</span>
+            </p>
+          </div>
 
-            <div class="row project__card--container">
+          <div class="carousel__item">
+            <p>
+              <em
+                >... Finally can do those pie [admixture] maps using ggplot ...
+                Amazing! Very happy to have found this!</em
+              >
+              <br /><br />
+              <span
+                ><a href="https://github.com/Tom-Jenkins/mapmixture/issues/24"
+                  >Gabriele</a
+                ></span
+              >
+              <span class="small-caps">r package user</span>
+            </p>
+          </div>
 
-                <div class="card">
-                    <div class="card__title">State of Wildfires</div>
-                    <div class="card__content">
-                        <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                        </svg>
-                        <a href="https://www.uea.ac.uk/climate/climate-data/state-of-wildfires">
-                            <img class="card__image" src="images/UEA_timeseries_wildfires.png" alt="screenshot of UEA wildfire time series app">
-                        </a>
-                    </div>
-                </div>
+          <div class="carousel__item">
+            <p>
+              <em
+                >Thanks for this package [mapmixture]; it's convenient to use
+                for great plots.</em
+              >
+              <br /><br />
+              <span
+                ><a href="https://github.com/Tom-Jenkins/mapmixture/issues/20"
+                  >Cigdem</a
+                ></span
+              >
+              <span class="small-caps">r package user</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
-                <div class="card">
-                    <div class="card__title">National Contributions to Global Warming</div>
-                    <div class="card__content">
-                        <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                        </svg>
-                        <a href="https://www.uea.ac.uk/climate/climate-data/attribution-of-global-warming">
-                            <img class="card__image" src="images/UEA_map_national_contributions.png" alt="screenshot of UEA global warming map app">
-                        </a>
-                    </div>
-                </div>
+      <div class="carousel__btn">
+        <button class="btn" id="prevBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            />
+          </svg>
+        </button>
+        <button class="btn" id="nextBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
 
-            </div>
+    <section class="contact" id="contact">
+      <div>
+        <h2 class="h2-letter-spacing">
+          Contact
+          <div class="line"></div>
+        </h2>
+      </div>
 
-            <div class="project__portfolio--btn">
-                <a href="portfolio.html"><button type="button" class="btn__dark">See Portfolio</button></a>
-            </div>
+      <div>
+        <div class="row">
+          <p class="contact__text">
+            Looking to create compelling data visualisations? Please get in
+            touch via email to discuss your project.
+          </p>
+        </div>
 
-        </section>
+        <br />
 
+        <div class="contact__list">
+          <ul class="ul-list">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-envelope-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+                />
+              </svg>
+              <a href="mailto:tom.l.jenkins@outlook.com"
+                >tom.l.jenkins@outlook.com</a
+              >
+            </li>
 
-        <section class="testimonials" id="testimonials">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                />
+              </svg>
+              <a href="https://github.com/Tom-Jenkins">GitHub</a>
+            </li>
 
-            <div class="testimonials__title">
-                <h2>Testimonials <div class="line"></div></h2>
-                <p>Hear from clients and users about the products and open-source tools I've developed</p>
-            </div>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+              <a href="https://www.linkedin.com/in/tom-l-jenkins/">LinkedIn</a>
+            </li>
 
-            <div class="carousel__container">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                width="16"
+                height="16"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                  d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"
+                />
+              </svg>
+              <a
+                href="https://scholar.google.co.uk/citations?user=k7oAuGgAAAAJ&hl=en"
+                >Google Scholar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
 
-                <div class="carousel">
+      <div id="map"></div>
+    </section>
 
-                    <div class="carousel__item">
-                        <p>
-                            <em>Testimonial from UEA colleague.</em>
-                            <br><br>
-                            <span><a href="https://research-portal.uea.ac.uk/en/persons/corinne-le-quere">Corinne Le Quéré</a></span>
-                            <span class="small-caps">professor of climate change science</span>
-                        </p>
-                    </div>
+    <footer>Copyright &copy; 2025 Tom Jenkins. All Rights Reserved.</footer>
 
-                    <div class="carousel__item">
-                        <p>
-                            <em>Thanks for this awesome tool [mapmixture], it's gonna be super helpful for a lot of people!</em>
-                            <br><br>
-                            <span><a href="https://github.com/Tom-Jenkins/mapmixture/issues/6">Carlos</a></span>
-                            <span class="small-caps">r package user</span>
-                        </p>
-                    </div>
-    
-                    <div class="carousel__item">
-                        <p> 
-                            <em>Thanks for developing this package [mapmixture], it's really great!</em>
-                            <br><br>
-                            <span><a href="https://github.com/Tom-Jenkins/mapmixture/issues/19">Manica</a></span>
-                            <span class="small-caps">r package user</span>
-                        </p>
-                    </div>
-
-                    <div class="carousel__item">
-                        <p> 
-                            <em style="font-size: 1.7rem;">Tom was very responsive to our requests and easy to work with. He carefully designed visualisations that captured the data in the way we wanted, with enhancements we hadn’t foreseen.</em>
-                            <br><br>
-                            <span><a href="https://research-portal.uea.ac.uk/en/persons/adam-smith">Adam Smith</a></span>
-                            <span class="small-caps">senior research associate</span>
-                        </p>
-                    </div>
-
-                    <div class="carousel__item">
-                        <p>
-                            <em>Tom worked tirelessly to deliver what we needed. He got the balance right between guiding how we display our work and respecting its scientific roots.</em>
-                            <br><br>
-                            <span><a href="https://research-portal.uea.ac.uk/en/persons/matthew-jones">Matthew Jones</a></span>
-                            <span class="small-caps">nerc independent research fellow</span>
-                        </p>
-                    </div>
-    
-                    <div class="carousel__item">
-                        <p>
-                            <em>... Finally can do those pie [admixture] maps using ggplot ... Amazing! Very happy to have found this!</em>
-                            <br><br>
-                            <span><a href="https://github.com/Tom-Jenkins/mapmixture/issues/24">Gabriele</a></span>
-                            <span class="small-caps">r package user</span>
-                        </p>
-                    </div>
-    
-                    <div class="carousel__item">
-                        <p>
-                            <em>Thanks for this package [mapmixture]; it's convenient to use for great plots.</em>
-                            <br><br>
-                            <span><a href="https://github.com/Tom-Jenkins/mapmixture/issues/20">Cigdem</a></span>
-                            <span class="small-caps">r package user</span>
-                        </p>
-                    </div>
-
-                </div>                
-
-            </div>
-
-            <div class="carousel__btn">
-                <button class="btn" id="prevBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
-                </button>
-                <button class="btn" id="nextBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
-                </button>
-            </div>
-            
-        </section>
-
-
-        <section class="contact" id="contact">
-
-            <div>
-                <h2 class="h2-letter-spacing">Contact <div class="line"></div></h2>
-            </div>
-
-            <div>
-                <div class="row">
-                    <p class="contact__text">
-                        Looking to create compelling data visualisations? Please get in touch via email to discuss your project.
-                    </p>
-                </div>
-                
-
-                <br>
-                
-                <div class="contact__list">
-                    <ul class="ul-list">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
-                            </svg>
-                            <a href="mailto:tom.l.jenkins@outlook.com">tom.l.jenkins@outlook.com</a>
-                        </li>
-        
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                            </svg>
-                            <a href="https://github.com/Tom-Jenkins">GitHub</a>
-                        </li>
-                        
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                            </svg>
-                            <a href="https://www.linkedin.com/in/tom-l-jenkins/">LinkedIn</a>
-                        </li>
-                        
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  width="16" height="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg>
-                            <a href="https://scholar.google.co.uk/citations?user=k7oAuGgAAAAJ&hl=en">Google Scholar</a>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>    
-            <br>    
-                
-            <div id="map"></div>
-            
-        </section>
-
-        <footer>
-            Copyright &copy; 2025 Tom Jenkins. All Rights Reserved.
-        </footer>
-    
     <script type="module" src="js/home.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-    </body>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </body>
 </html>
